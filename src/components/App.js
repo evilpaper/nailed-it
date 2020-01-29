@@ -9,17 +9,16 @@ export default function App() {
   const [decks, setDecks] = useState(startDecks);
 
   const deckContextValue = {
-    handleDeckChange
+    handleCardAdd
   };
 
-  function handleDeckChange(id, deck) {
+  function handleCardAdd(id) {
     console.log("Yeah");
-    /*
-    const newDeck = [...deck];
-    const index = newDeck.findIndex(d => d.id === id);
-    newDeck[index] = deck;
-    setDecks(newDeck);
-    */
+    const newCard = {
+      id: nanoid(),
+      question: "NEW!!!",
+      answer: "NEW!!!"
+    };
   }
 
   return (
@@ -39,33 +38,28 @@ export default function App() {
 const startDecks = [
   {
     id: nanoid(),
-    name: "My Awesome Deck",
+    name: "My First French Deck",
     cards: [
       {
         id: nanoid(),
-        question: "How to reload page in JavaScript",
-        answer: "window.location.reload()"
+        question: "The girl",
+        answer: "La fille"
       },
       {
         id: nanoid(),
-        question: "How to loop through array in JavaScript",
-        answer: "for (const person of people) { console.log(person) }"
+        question: "The boy",
+        answer: "Le garcon"
       }
     ]
   },
   {
     id: nanoid(),
-    name: "My Wonderful Deck",
+    name: "My Second French Deck",
     cards: [
       {
         id: nanoid(),
-        question: "How to reload page in JavaScript",
-        answer: "window.location.reload()"
-      },
-      {
-        id: nanoid(),
-        question: "How to loop through array in JavaScript",
-        answer: "for (const person of people) { console.log(person) }"
+        question: "I am",
+        answer: "Je suis"
       }
     ]
   }
