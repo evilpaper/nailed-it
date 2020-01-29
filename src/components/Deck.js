@@ -1,18 +1,29 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import Card from "./Card";
-import { DeckContext } from "./App";
+import nanoid from "nanoid";
 
-export default function Deck({ cards, id }) {
-  const { handleCardAdd } = useContext(DeckContext);
+export default function Deck(props) {
+  const { cards, id } = props;
+  const [cardsInDeck, setCardsInDeck] = useState(cards);
+
+  function handleCardAdd() {
+    const newCard = {
+      id: nanoid(),
+      question: "Question",
+      answer: "Answer"
+    };
+    setCardsInDeck([...cardsInDeck, newCard]);
+  }
+
   return (
     <div className="n-deck">
       <div className="n-deck-menu">
         <h2 className="n-deck-name">My Awesome Deck</h2>
-        <button onClick={() => handleCardAdd(id)}>Add card</button>
+        <button onClick={handleCardAdd}>Add card</button>
         <button>Start Study</button>
       </div>
       <div className="n-deck-cards">
-        {cards.map(card => {
+        {cardsInDeck.map(card => {
           return <Card key={card.id} {...card} />;
         })}
       </div>

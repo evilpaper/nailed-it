@@ -3,23 +3,8 @@ import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
 
-export const DeckContext = React.createContext();
-
 export default function App() {
   const [decks, setDecks] = useState(startDecks);
-
-  const deckContextValue = {
-    handleCardAdd
-  };
-
-  function handleCardAdd(id) {
-    console.log("Yeah");
-    const newCard = {
-      id: nanoid(),
-      question: "NEW!!!",
-      answer: "NEW!!!"
-    };
-  }
 
   return (
     <div className="n-app">
@@ -28,9 +13,7 @@ export default function App() {
         <button>Sign in</button>
       </div>
       <div className="n-divider"></div>
-      <DeckContext.Provider value={deckContextValue}>
-        <Decks decks={decks} />
-      </DeckContext.Provider>
+      <Decks decks={decks} />
     </div>
   );
 }
