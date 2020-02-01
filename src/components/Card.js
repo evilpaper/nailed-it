@@ -9,8 +9,8 @@ export default function Card(props) {
         className="n-card__question"
         id="question"
         name="question"
-        value={question}
-      />
+        defaultValue={question}
+      ></textarea>
     </div>
   );
 }

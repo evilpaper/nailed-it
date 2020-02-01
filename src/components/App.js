@@ -6,6 +6,18 @@ import nanoid from "nanoid";
 export default function App() {
   const [decks, setDecks] = useState(startDecks);
 
+  const addCardToDeck = deckID => {
+    const newCard = {
+      id: nanoid(),
+      question: "Question",
+      answer: "Answer"
+    };
+    const newDecks = [...decks];
+    const index = newDecks.findIndex(d => d.id === deckID);
+    newDecks[index].cards.push(newCard);
+    setDecks(newDecks);
+  };
+
   return (
     <div className="n-app">
       <div className="n-header">
@@ -13,7 +25,7 @@ export default function App() {
         <button>Sign in</button>
       </div>
       <div className="n-divider"></div>
-      <Decks decks={decks} />
+      <Decks decks={decks} addCardToDeck={addCardToDeck} />
     </div>
   );
 }
