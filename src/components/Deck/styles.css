@@ -5,13 +5,14 @@
   padding-bottom: 2em;
 }
 
+.n-deck-name {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
 .n-deck-menu {
   display: flex;
   margin-bottom: 1em;
-}
-
-.n-deck-name {
-  width: 10em;
 }
 
 .n-deck-cards {

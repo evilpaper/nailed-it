@@ -22,3 +22,7 @@
 .n-card__question:focus {
   outline: none;
 }
+
+.n-card__answer {
+  display: none;
+}

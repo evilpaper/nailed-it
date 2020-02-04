@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
+import START_DECKS from "./START_DECKS";
 
 export default function App() {
-  const [decks, setDecks] = useState(startDecks);
+  const [decks, setDecks] = useState(START_DECKS);
 
   const addCardToDeck = deckID => {
     const newCard = {
@@ -14,7 +15,7 @@ export default function App() {
     };
     const newDecks = [...decks];
     const index = newDecks.findIndex(d => d.id === deckID);
-    newDecks[index].cards.push(newCard);
+    newDecks[index].cards = [newCard, ...newDecks[index].cards];
     setDecks(newDecks);
   };
 
@@ -29,33 +30,3 @@ export default function App() {
     </div>
   );
 }
-
-const startDecks = [
-  {
-    id: nanoid(),
-    name: "My First French Deck",
-    cards: [
-      {
-        id: nanoid(),
-        question: "The girl",
-        answer: "La fille"
-      },
-      {
-        id: nanoid(),
-        question: "The boy",
-        answer: "Le garcon"
-      }
-    ]
-  },
-  {
-    id: nanoid(),
-    name: "My Second French Deck",
-    cards: [
-      {
-        id: nanoid(),
-        question: "I am",
-        answer: "Je suis"
-      }
-    ]
-  }
-];
