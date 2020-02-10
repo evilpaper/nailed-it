@@ -19,6 +19,8 @@ export default function App() {
     setDecks(newDecks);
   };
 
+  const removeCardFromDeck = deckID => {};
+
   return (
     <div className="n-app">
       <div className="n-header">

@@ -15,12 +15,20 @@ export default function Card({ question, answer }) {
     console.log(flipped);
   };
 
+  const onDeleteCard = () => {
+    console.log("Card is deleted");
+  };
+
   return (
     <div className="card-container" onClick={onClickCard}>
       <a.div
         className="card back"
         style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
       >
+        {" "}
+        <button className="card__delete" onClick={onDeleteCard}>
+          &times;
+        </button>
         <textarea
           className="card__content card__content--back"
           id="answer"
@@ -36,6 +44,10 @@ export default function Card({ question, answer }) {
           transform: transform.interpolate(t => `${t} rotateY(180deg)`)
         }}
       >
+        {" "}
+        <button className="card__delete" onClick={onDeleteCard}>
+          &times;
+        </button>
         <textarea
           className="card__content"
           id="question"
