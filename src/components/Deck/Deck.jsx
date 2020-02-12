@@ -1,10 +1,23 @@
 import React from "react";
 import Card from "../Card";
 
-export default function Deck({ cards, name, id, addCardToDeck }) {
+export default function Deck({
+  cards,
+  name,
+  id,
+  addCardToDeck,
+  removeCardFromDeck
+}) {
   const onClickAddCard = () => addCardToDeck(id);
   const cardList = cards.map(card => {
-    return <Card key={card.id} {...card} />;
+    return (
+      <Card
+        key={card.id}
+        {...card}
+        removeCardFromDeck={removeCardFromDeck}
+        deckID={id}
+      />
+    );
   });
 
   return (

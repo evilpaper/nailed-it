@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
 
-export default function Card({ question, answer }) {
+export default function Card({
+  question,
+  answer,
+  id,
+  removeCardFromDeck,
+  deckID
+}) {
   const [flipped, flip] = useState(true);
 
   const { transform, opacity } = useSpring({
@@ -12,11 +18,10 @@ export default function Card({ question, answer }) {
 
   const onClickCard = () => {
     flip(flipped => !flipped);
-    console.log(flipped);
   };
 
   const onDeleteCard = () => {
-    console.log("Card is deleted");
+    removeCardFromDeck(id, deckID);
   };
 
   return (

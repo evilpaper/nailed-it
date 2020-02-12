@@ -13,13 +13,18 @@ export default function App() {
       question: "Question",
       answer: "Answer"
     };
-    const newDecks = [...decks];
-    const index = newDecks.findIndex(d => d.id === deckID);
-    newDecks[index].cards = [newCard, ...newDecks[index].cards];
-    setDecks(newDecks);
+    const newDecks = [...decks]; // Copy decks
+    const index = newDecks.findIndex(d => d.id === deckID); // Find the index of the changed deck
+    newDecks[index].cards = [newCard, ...newDecks[index].cards]; // Update the cards array in the changed deck
+    setDecks(newDecks); // Update state with new decks to page refresh
   };
 
-  const removeCardFromDeck = deckID => {};
+  const removeCardFromDeck = (cardID, deckID) => {
+    const newDecks = [...decks];
+    const index = newDecks.findIndex(d => d.id === deckID);
+    newDecks[index].cards = newDecks[index].cards.filter(c => c.id !== cardID);
+    setDecks(newDecks);
+  };
 
   return (
     <div className="n-app">
@@ -28,7 +33,11 @@ export default function App() {
         <button>Sign in</button>
       </div>
       <div className="n-divider"></div>
-      <Decks decks={decks} addCardToDeck={addCardToDeck} />
+      <Decks
+        decks={decks}
+        addCardToDeck={addCardToDeck}
+        removeCardFromDeck={removeCardFromDeck}
+      />
     </div>
   );
 }
