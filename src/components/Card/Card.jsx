@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
+import { FiTrash2 } from "react-icons/fi";
 
 export default function Card({
   question,
@@ -31,8 +32,11 @@ export default function Card({
         style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
       >
         {" "}
-        <button className="card__delete" onClick={onDeleteCard}>
-          &times;
+        <button
+          className="card__delete card__delete--back"
+          onClick={onDeleteCard}
+        >
+          <FiTrash2 />
         </button>
         <textarea
           className="card__content card__content--back"
@@ -51,7 +55,7 @@ export default function Card({
       >
         {" "}
         <button className="card__delete" onClick={onDeleteCard}>
-          &times;
+          <FiTrash2 />
         </button>
         <textarea
           className="card__content"
