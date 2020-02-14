@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
-import { FiTrash2 } from "react-icons/fi";
+import { FiTrash2, FiEdit3 } from "react-icons/fi";
 
 export default function Card({
   question,
@@ -54,6 +54,9 @@ export default function Card({
         }}
       >
         {" "}
+        <button className="card__edit">
+          <FiEdit3 />
+        </button>
         <button className="card__delete" onClick={onDeleteCard}>
           <FiTrash2 />
         </button>

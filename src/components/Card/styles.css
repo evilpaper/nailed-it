@@ -61,3 +61,16 @@
   border-color: antiquewhite;
   color: antiquewhite;
 }
+
+.card__edit {
+  position: absolute;
+  top: 1em;
+  right: 4em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6em;
+  font-size: 0.8em;
+}

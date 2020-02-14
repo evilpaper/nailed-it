@@ -10,6 +10,7 @@ export default function Deck({
 }) {
   const onClickAddCard = () => addCardToDeck(id);
   const cardList = cards.map(card => {
+    // const deleteCard = removeCardFromDeck() do something with this as Sascha showed
     return (
       <Card
         key={card.id}
