@@ -89,3 +89,26 @@
   background-color: antiquewhite;
   color: coral;
 }
+
+.card__flip {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6em;
+  font-size: 0.8em;
+}
+
+.card__flip--back {
+  border-color: antiquewhite;
+  color: antiquewhite;
+}
+
+.card__flip--back:hover {
+  background-color: antiquewhite;
+  color: coral;
+}

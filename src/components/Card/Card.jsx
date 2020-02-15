@@ -10,6 +10,7 @@ export default function Card({
   deckID
 }) {
   const [flipped, flip] = useState(true);
+  const [focus, setFocus] = useState(false);
 
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
@@ -17,7 +18,8 @@ export default function Card({
     config: { mass: 5, tension: 600, friction: 60 }
   });
 
-  const onClickCard = () => {
+  const onFlipCard = () => {
+    console.log("You clicked flip");
     flip(flipped => !flipped);
   };
 
@@ -27,11 +29,13 @@ export default function Card({
 
   const onEditCard = e => {
     e.stopPropagation();
+    setFocus(focus => !focus);
     console.log("You clicked edit");
+    console.log(focus);
   };
 
   return (
-    <div className="card-container" onClick={onClickCard}>
+    <div className="card-container">
       <a.div
         className="card back"
         style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
@@ -52,6 +56,9 @@ export default function Card({
           name="answer"
           defaultValue={answer}
         ></textarea>
+        <button className="card__flip card__flip--back" onClick={onFlipCard}>
+          flip
+        </button>
       </a.div>
 
       <a.div
@@ -74,6 +81,9 @@ export default function Card({
           name="question"
           defaultValue={question}
         ></textarea>
+        <button className="card__flip" onClick={onFlipCard}>
+          flip
+        </button>
       </a.div>
     </div>
   );

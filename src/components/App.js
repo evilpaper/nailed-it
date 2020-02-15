@@ -7,13 +7,16 @@ import START_DECKS from "./START_DECKS";
 export default function App() {
   const [decks, setDecks] = useState(START_DECKS);
 
+  class Card {
+    constructor() {
+      this.id = nanoid();
+      this.question = "Question";
+      this.answer = "Answer";
+    }
+  }
+
   const addCardToDeck = deckID => {
-    // Move card out to a class and call it with new. It's cleaner.
-    const newCard = {
-      id: nanoid(),
-      question: "Question",
-      answer: "Answer"
-    };
+    const newCard = new Card();
     const newDecks = [...decks];
     const index = newDecks.findIndex(d => d.id === deckID);
     newDecks[index].cards = [newCard, ...newDecks[index].cards];
