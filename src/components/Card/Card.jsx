@@ -13,7 +13,7 @@ export default function Card({
 
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
+    transform: `perspective(600px) rotateY(${flipped ? -180 : 0}deg)`,
     config: { mass: 5, tension: 600, friction: 60 }
   });
 
@@ -25,6 +25,11 @@ export default function Card({
     removeCardFromDeck(id, deckID);
   };
 
+  const onEditCard = e => {
+    e.stopPropagation();
+    console.log("You clicked edit");
+  };
+
   return (
     <div className="card-container" onClick={onClickCard}>
       <a.div
@@ -32,6 +37,9 @@ export default function Card({
         style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
       >
         {" "}
+        <button className="card__edit card__edit--back" onClick={onEditCard}>
+          <FiEdit3 />
+        </button>
         <button
           className="card__delete card__delete--back"
           onClick={onDeleteCard}
@@ -50,11 +58,11 @@ export default function Card({
         className="card front"
         style={{
           opacity,
-          transform: transform.interpolate(t => `${t} rotateY(180deg)`)
+          transform: transform.interpolate(t => `${t} rotateY(-180deg)`)
         }}
       >
         {" "}
-        <button className="card__edit">
+        <button className="card__edit" onClick={onEditCard}>
           <FiEdit3 />
         </button>
         <button className="card__delete" onClick={onDeleteCard}>
