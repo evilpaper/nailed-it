@@ -1,7 +1,12 @@
 import React from "react";
 import Deck from "../Deck";
 
-export default function Decks({ decks, addCardToDeck, removeCardFromDeck }) {
+export default function Decks({
+  decks,
+  addCardToDeck,
+  removeCardFromDeck,
+  handleCardContentChange
+}) {
   return (
     <div className="n-Decks">
       {decks.map(deck => {
@@ -11,6 +16,7 @@ export default function Decks({ decks, addCardToDeck, removeCardFromDeck }) {
             {...deck}
             addCardToDeck={addCardToDeck}
             removeCardFromDeck={removeCardFromDeck}
+            handleCardContentChange={handleCardContentChange}
           />
         );
       })}

@@ -6,7 +6,8 @@ export default function Deck({
   name,
   id,
   addCardToDeck,
-  removeCardFromDeck
+  removeCardFromDeck,
+  handleCardContentChange
 }) {
   const onClickAddCard = () => addCardToDeck(id);
   const cardList = cards.map(card => {
@@ -16,6 +17,7 @@ export default function Deck({
         {...card}
         removeCardFromDeck={removeCardFromDeck}
         deckID={id}
+        handleCardContentChange={handleCardContentChange}
       />
     );
   });
@@ -25,7 +27,7 @@ export default function Deck({
       <h2 className="n-deck-name">{name}</h2>
       <div className="n-deck-menu">
         <button onClick={onClickAddCard}>Add card</button>
-        <button>Start Study</button>
+        <button>Start Study - coming soon</button>
       </div>
       <div className="n-deck-cards">{cardList}</div>
     </div>

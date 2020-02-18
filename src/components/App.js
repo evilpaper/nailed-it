@@ -41,6 +41,15 @@ export default function App() {
     setDecks(newDecks);
   };
 
+  const handleCardContentChange = (changes, cardID, deckID) => {
+    const newDecks = [...decks];
+    const deckIndex = newDecks.findIndex(d => d.id === deckID);
+    const cardIndex = newDecks[deckIndex].cards.findIndex(c => c.id === cardID);
+    const newCard = newDecks[deckIndex].cards[cardIndex];
+    newDecks[deckIndex].cards[cardIndex] = { ...newCard, ...changes };
+    setDecks(newDecks);
+  };
+
   return (
     <div className="n-app">
       <div className="n-header">
@@ -52,6 +61,7 @@ export default function App() {
         decks={decks}
         addCardToDeck={addCardToDeck}
         removeCardFromDeck={removeCardFromDeck}
+        handleCardContentChange={handleCardContentChange}
       />
     </div>
   );
