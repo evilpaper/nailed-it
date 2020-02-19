@@ -10,6 +10,7 @@ export default function Deck({
   handleCardContentChange
 }) {
   const onClickAddCard = () => addCardToDeck(id);
+
   const cardList = cards.map(card => {
     return (
       <Card
