@@ -6,9 +6,9 @@ export default function Card({
   question,
   answer,
   id,
-  removeCardFromDeck,
   deckID,
-  handleCardContentChange
+  handleCardContentChange,
+  handleDeleteCard
 }) {
   const [flipped, flip] = useState(true);
 
@@ -23,7 +23,7 @@ export default function Card({
   };
 
   const onDeleteCard = () => {
-    removeCardFromDeck(id, deckID);
+    handleDeleteCard(id);
   };
 
   const handleChange = changes => {

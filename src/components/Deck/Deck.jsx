@@ -11,14 +11,17 @@ export default function Deck({
 }) {
   const onClickAddCard = () => addCardToDeck(id);
 
+  const handleDeleteCard = card => {
+    removeCardFromDeck(card, id);
+  };
+
   const cardList = cards.map(card => {
     return (
       <Card
         key={card.id}
         {...card}
-        removeCardFromDeck={removeCardFromDeck}
-        deckID={id}
         handleCardContentChange={handleCardContentChange}
+        handleDeleteCard={handleDeleteCard}
       />
     );
   });
