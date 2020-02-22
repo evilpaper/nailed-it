@@ -6,8 +6,7 @@ export default function Card({
   question,
   answer,
   id,
-  deckID,
-  handleCardContentChange,
+  handleEditCard,
   handleDeleteCard
 }) {
   const [flipped, flip] = useState(true);
@@ -27,7 +26,7 @@ export default function Card({
   };
 
   const handleChange = changes => {
-    handleCardContentChange(changes, id, deckID);
+    handleEditCard(changes, id);
   };
 
   return (

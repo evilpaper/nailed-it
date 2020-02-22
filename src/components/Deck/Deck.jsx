@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Card";
+import { FiEdit3 } from "react-icons/fi";
 
 export default function Deck({
   cards,
@@ -11,6 +12,10 @@ export default function Deck({
 }) {
   const onClickAddCard = () => addCardToDeck(id);
 
+  const handleEditCard = (changes, card) => {
+    handleCardContentChange(changes, card, id);
+  };
+
   const handleDeleteCard = card => {
     removeCardFromDeck(card, id);
   };
@@ -20,7 +25,7 @@ export default function Deck({
       <Card
         key={card.id}
         {...card}
-        handleCardContentChange={handleCardContentChange}
+        handleEditCard={handleEditCard}
         handleDeleteCard={handleDeleteCard}
       />
     );
@@ -29,6 +34,9 @@ export default function Deck({
   return (
     <div className="n-deck">
       <h2 className="n-deck-name">{name}</h2>
+      <button className="deck-name__edit">
+        <FiEdit3 />
+      </button>
       <div className="n-deck-menu">
         <button onClick={onClickAddCard}>Add card</button>
         <button>Start Study - coming soon</button>
