@@ -6,8 +6,19 @@
 }
 
 .n-deck-name {
+  display: block;
   margin-bottom: 1em;
   margin-left: 1em;
+  border: none;
+  text-align: left;
+  resize: none;
+  cursor: pointer;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.n-deck-name:focus {
+  outline: none;
 }
 
 .n-deck-menu {
@@ -21,7 +32,7 @@
 
 .deck-name__edit {
   position: absolute;
-  left: 14em;
+  left: 20em;
   padding-left: 0.6em;
   padding-right: 0.6em;
   display: flex;

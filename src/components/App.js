@@ -50,6 +50,13 @@ export default function App() {
     setDecks(newDecks);
   };
 
+  const handleDeckNameChange = (name, deckID) => {
+    const newDecks = [...decks];
+    const index = newDecks.findIndex(d => d.id === deckID);
+    newDecks[index].name = name;
+    setDecks(newDecks);
+  };
+
   return (
     <div className="n-app">
       <div className="n-header">
@@ -62,6 +69,7 @@ export default function App() {
         addCardToDeck={addCardToDeck}
         removeCardFromDeck={removeCardFromDeck}
         handleCardContentChange={handleCardContentChange}
+        handleDeckNameChange={handleDeckNameChange}
       />
     </div>
   );

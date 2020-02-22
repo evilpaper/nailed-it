@@ -5,7 +5,8 @@ export default function Decks({
   decks,
   addCardToDeck,
   removeCardFromDeck,
-  handleCardContentChange
+  handleCardContentChange,
+  handleDeckNameChange
 }) {
   const deckList = decks.map(deck => {
     return (
@@ -15,6 +16,7 @@ export default function Decks({
         addCardToDeck={addCardToDeck}
         removeCardFromDeck={removeCardFromDeck}
         handleCardContentChange={handleCardContentChange}
+        handleDeckNameChange={handleDeckNameChange}
       />
     );
   });

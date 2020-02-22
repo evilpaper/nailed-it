@@ -8,7 +8,8 @@ export default function Deck({
   id,
   addCardToDeck,
   removeCardFromDeck,
-  handleCardContentChange
+  handleCardContentChange,
+  handleDeckNameChange
 }) {
   const onClickAddCard = () => addCardToDeck(id);
 
@@ -18,6 +19,10 @@ export default function Deck({
 
   const handleDeleteCard = card => {
     removeCardFromDeck(card, id);
+  };
+
+  const handleEditDeckName = name => {
+    handleDeckNameChange(name, id);
   };
 
   const cardList = cards.map(card => {
@@ -33,7 +38,12 @@ export default function Deck({
 
   return (
     <div className="n-deck">
-      <h2 className="n-deck-name">{name}</h2>
+      <textarea
+        className="n-deck-name"
+        defaultValue={name}
+        onChange={e => handleEditDeckName(e.target.value)}
+        maxlength={40}
+      ></textarea>
       <button className="deck-name__edit">
         <FiEdit3 />
       </button>
