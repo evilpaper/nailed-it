@@ -1,3 +1,11 @@
+/*
+Edit button should set focus on element that should change
+Add slide in animation to cards
+Add logo
+Add favicon
+Add styles
+*/
+
 import React, { useState, useEffect } from "react";
 import Decks from "./Decks";
 import "./app.css";

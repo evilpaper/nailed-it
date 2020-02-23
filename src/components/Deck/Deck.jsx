@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "../Card";
-import { FiEdit3 } from "react-icons/fi";
 
 export default function Deck({
   cards,
@@ -38,15 +37,14 @@ export default function Deck({
 
   return (
     <div className="n-deck">
-      <textarea
+      <input
+        type="text"
+        name="deck-name"
         className="n-deck-name"
         defaultValue={name}
         onChange={e => handleEditDeckName(e.target.value)}
-        maxlength={40}
-      ></textarea>
-      <button className="deck-name__edit">
-        <FiEdit3 />
-      </button>
+        maxLength="30"
+      />
       <div className="n-deck-menu">
         <button onClick={onClickAddCard}>Add card</button>
         <button>Start Study - coming soon</button>

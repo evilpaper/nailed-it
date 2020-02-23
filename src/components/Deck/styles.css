@@ -6,15 +6,11 @@
 }
 
 .n-deck-name {
-  display: block;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   margin-left: 1em;
   border: none;
   text-align: left;
-  resize: none;
   cursor: pointer;
-  overflow: hidden;
-  overflow-wrap: break-word;
 }
 
 .n-deck-name:focus {
@@ -28,6 +24,8 @@
 
 .n-deck-cards {
   display: flex;
+  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .deck-name__edit {

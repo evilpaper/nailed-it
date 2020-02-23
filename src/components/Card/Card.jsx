@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
-import { FiTrash2, FiEdit3 } from "react-icons/fi";
+import { FiTrash2 } from "react-icons/fi";
 
 export default function Card({
   question,
@@ -36,9 +36,6 @@ export default function Card({
         style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
       >
         {" "}
-        <button className="card__edit card__edit--back">
-          <FiEdit3 />
-        </button>
         <button
           className="card__delete card__delete--back"
           onClick={onDeleteCard}
@@ -51,6 +48,7 @@ export default function Card({
           name="answer"
           defaultValue={answer}
           onChange={e => handleChange({ answer: e.target.value })}
+          maxLength="240"
         ></textarea>
         <button className="card__flip card__flip--back" onClick={onFlipCard}>
           flip
@@ -65,9 +63,6 @@ export default function Card({
         }}
       >
         {" "}
-        <button className="card__edit">
-          <FiEdit3 />
-        </button>
         <button className="card__delete" onClick={onDeleteCard}>
           <FiTrash2 />
         </button>
@@ -77,6 +72,7 @@ export default function Card({
           name="question"
           defaultValue={question}
           onChange={e => handleChange({ question: e.target.value })}
+          maxLength="240"
         ></textarea>
         <button className="card__flip" onClick={onFlipCard}>
           flip
