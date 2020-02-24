@@ -50,6 +50,7 @@ export default function Deck({
         <button>Start Study - coming soon</button>
       </div>
       <div className="n-deck-cards">{cardList}</div>
+      <div className="n-divider"></div>
     </div>
   );
 }
