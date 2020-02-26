@@ -66,12 +66,12 @@ export default function App() {
   };
 
   return (
-    <div className="n-app">
-      <div className="n-header">
+    <div className="app">
+      <div className="header">
         <span>Logo</span>
         <button>Sign in</button>
       </div>
-      <div className="n-divider"></div>
+      <div className="divider"></div>
       <Decks
         decks={decks}
         addCardToDeck={addCardToDeck}

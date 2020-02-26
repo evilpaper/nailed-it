@@ -21,5 +21,5 @@ export default function Decks({
     );
   });
 
-  return <div className="n-Decks">{deckList}</div>;
+  return <div className="deck-list">{deckList}</div>;
 }

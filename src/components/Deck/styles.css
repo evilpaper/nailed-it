@@ -1,11 +1,11 @@
-.n-deck {
+.deck {
   display: flex;
   flex-direction: column;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-.n-deck-name {
+.deck__name {
   margin-bottom: 2em;
   margin-left: 1em;
   border: none;
@@ -13,22 +13,22 @@
   cursor: pointer;
 }
 
-.n-deck-name:focus {
+.deck__name:focus {
   outline: none;
 }
 
-.n-deck-menu {
+.deck__actions-menu {
   display: flex;
   margin-bottom: 1em;
 }
 
-.n-deck-cards {
+.deck__card-list {
   display: flex;
   overflow-x: hidden;
   overflow-x: auto;
 }
 
-.deck-name__edit {
+.deck__name--edit {
   position: absolute;
   left: 20em;
   padding-left: 0.6em;

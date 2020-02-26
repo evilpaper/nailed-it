@@ -36,21 +36,21 @@ export default function Deck({
   });
 
   return (
-    <div className="n-deck">
+    <div className="deck">
       <input
         type="text"
         name="deck-name"
-        className="n-deck-name"
+        className="deck__name"
         defaultValue={name}
         onChange={e => handleEditDeckName(e.target.value)}
         maxLength="30"
       />
-      <div className="n-deck-menu">
+      <div className="deck__actions-menu">
         <button onClick={onClickAddCard}>Add card</button>
-        <button>Start Study - coming soon</button>
+        <button>Start Study</button>
       </div>
-      <div className="n-deck-cards">{cardList}</div>
-      <div className="n-divider"></div>
+      <div className="deck__card-list">{cardList}</div>
+      <div className="divider"></div>
     </div>
   );
 }

@@ -6,11 +6,11 @@ body {
   justify-content: center;
 }
 
-.n-app {
+.app {
   width: 90vw;
 }
 
-.n-header {
+.header {
   width: 100%;
   border: 1px solid coral;
   display: flex;
@@ -44,7 +44,7 @@ h2 {
   line-height: 2em;
 }
 
-.n-divider {
+.divider {
   background-color: coral;
   width: 100%;
   height: 1px;
