@@ -24,8 +24,8 @@
 
 .deck__card-list {
   display: flex;
-  overflow-x: hidden;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .deck__name--edit {
