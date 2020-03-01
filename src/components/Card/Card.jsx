@@ -32,7 +32,7 @@ export default function Card({
   };
 
   return (
-    <a.div className="card-container">
+    <div className="card-container">
       <a.div
         className="card back"
         style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
@@ -80,6 +80,6 @@ export default function Card({
           flip
         </button>
       </a.div>
-    </a.div>
+    </div>
   );
 }
