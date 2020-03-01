@@ -15,7 +15,7 @@ body {
   border: 1px solid coral;
   display: flex;
   justify-content: space-between;
-  align-items: centerç;
+  align-items: center;
   padding: 1em;
 }
 
