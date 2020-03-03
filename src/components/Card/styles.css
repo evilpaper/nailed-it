@@ -1,9 +1,9 @@
 .card-container {
   position: relative;
-  width: 16em;
-  height: 16em;
-  min-width: 16em;
-  min-height: 16em;
+  width: 18em;
+  height: 18em;
+  min-width: 18em;
+  min-height: 18em;
   margin: 1em;
 }
 
@@ -36,12 +36,14 @@
   justify-content: center;
   align-items: center;
   border: none;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
   resize: none;
   cursor: pointer;
   background-color: #05061a;
   color: #fefefe;
+  font-size: 1.4em;
+  padding: 1.8em;
 }
 
 .card__content:focus {
@@ -50,15 +52,16 @@
 
 .card__delete {
   position: absolute;
-  top: 1.6em;
-  right: 1.6em;
+  bottom: 1.6em;
+  left: 1.6em;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.6em;
+  margin: 0;
   font-size: 1em;
   color: #fefefe;
-  border-color: #fefefe;
+  border-color: #1e2166;
 }
 
 .card__delete--back {
@@ -102,8 +105,10 @@
   justify-content: center;
   align-items: center;
   font-size: 1em;
+  height: 2.4em;
   color: #fefefe;
-  border-color: #fefefe;
+  color: #c9ccff;
+  border-color: #1e2166;
 }
 
 .card__flip--back {

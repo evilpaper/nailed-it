@@ -74,7 +74,6 @@ export default function App() {
         </div>
         <button id="sign-in">Sign in</button>
       </div>
-      <div className="divider"></div>
       <Decks
         decks={decks}
         addCardToDeck={addCardToDeck}

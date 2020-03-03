@@ -56,3 +56,9 @@ h2 {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+@media (min-height: 599px) {
+  .app {
+    width: 100vw;
+  }
+}
