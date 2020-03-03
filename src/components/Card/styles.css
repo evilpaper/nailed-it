@@ -9,9 +9,6 @@
 
 .card {
   position: absolute;
-  /*
-  border: 2px solid coral;
-  */
   background-color: #05061a;
   border-radius: 10%;
   text-align: center;
@@ -23,12 +20,7 @@
   justify-content: center;
   align-items: center;
   backface-visibility: hidden;
-}
-
-.back,
-.card__content--back {
-  background-color: coral;
-  color: antiquewhite;
+  box-shadow: 0 8px 12px 0 hsla(0, 0%, 0%, 0.4);
 }
 
 .card__content {
@@ -46,6 +38,12 @@
   padding: 1.8em;
 }
 
+.back,
+.card__content--back {
+  background-color: antiquewhite;
+  color: #05061a;
+}
+
 .card__content:focus {
   outline: 0;
 }
@@ -61,17 +59,24 @@
   margin: 0;
   font-size: 1em;
   color: #fefefe;
-  border-color: #1e2166;
+  border-color: #323566;
+}
+
+.card__delete:hover {
+  background-color: antiquewhite;
+  border-color: #05061a;
+  color: #05061a;
 }
 
 .card__delete--back {
-  border-color: antiquewhite;
-  color: antiquewhite;
+  border-color: #bcbdd2;
+  color: #05061a;
 }
 
 .card__delete--back:hover {
-  background-color: antiquewhite;
-  color: coral;
+  background-color: #05061a;
+  border-color: #05061a;
+  color: antiquewhite;
 }
 
 .card__edit {
@@ -87,14 +92,21 @@
   font-size: 0.8em;
 }
 
+.card__edit:hover {
+  background-color: antiquewhite;
+  border-color: #05061a;
+  color: #05061a;
+}
+
 .card__edit--back {
-  border-color: antiquewhite;
-  color: antiquewhite;
+  border-color: #bcbdd2;
+  color: #05061a;
 }
 
 .card__edit--back:hover {
-  background-color: antiquewhite;
-  color: coral;
+  background-color: #05061a;
+  border-color: #05061a;
+  color: antiquewhite;
 }
 
 .card__flip {
@@ -107,16 +119,22 @@
   font-size: 1em;
   height: 2.4em;
   color: #fefefe;
-  color: #c9ccff;
-  border-color: #1e2166;
+  border-color: #323566;
+}
+
+.card__flip:hover {
+  background-color: antiquewhite;
+  border-color: #05061a;
+  color: #05061a;
 }
 
 .card__flip--back {
-  border-color: antiquewhite;
-  color: antiquewhite;
+  border-color: #bcbdd2;
+  color: #05061a;
 }
 
 .card__flip--back:hover {
-  background-color: antiquewhite;
-  color: coral;
+  background-color: #05061a;
+  border-color: #05061a;
+  color: antiquewhite;
 }

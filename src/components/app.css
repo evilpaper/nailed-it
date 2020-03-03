@@ -27,6 +27,8 @@ button {
   margin-left: 1em;
   padding-left: 1.6em;
   padding-right: 1.6em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
 }
 
 button:hover {
@@ -45,10 +47,6 @@ h2 {
   line-height: 2em;
 }
 
-#sign-in {
-  max-height: 2em;
-}
-
 .divider {
   background-color: coral;
   width: 100%;
@@ -57,7 +55,7 @@ h2 {
   margin-bottom: 1em;
 }
 
-@media (min-height: 599px) {
+@media (max-width: 599px) {
   .app {
     width: 100vw;
   }
