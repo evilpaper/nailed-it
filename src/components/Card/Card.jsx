@@ -17,8 +17,6 @@ export default function Card({
     config: { mass: 5, tension: 600, friction: 60 }
   });
 
-  // const swing_in_top_fwd = useSpring({ opacity: 1, from: { opacity: 0 } });
-
   const onFlipCard = () => {
     flip(flipped => !flipped);
   };

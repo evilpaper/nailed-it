@@ -1,16 +1,8 @@
-/*
-Edit button should set focus on element that should change
-Add slide in animation to cards
-Add logo
-Add favicon
-Add styles
-*/
-
 import React, { useState, useEffect } from "react";
 import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
-import nailedItLogo from "./nailed-it-logo.svg";
+import nailedItLogo from "./nailed-it-logo-color.svg";
 import START_DECKS from "./START_DECKS";
 
 const LOCAL_STORAGE_KEY = "nailed-it.decks";
@@ -70,7 +62,7 @@ export default function App() {
     <div className="app">
       <div className="header">
         <div className="logo">
-          <img src={nailedItLogo} alt="Nailed It" width="64" height="64"></img>
+          <img src={nailedItLogo} alt="Nailed It" width="72" height="72"></img>
         </div>
         <button id="sign-in">Sign in</button>
       </div>

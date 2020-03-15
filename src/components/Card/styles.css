@@ -1,10 +1,7 @@
 .card-container {
-  position: relative;
+  position: absolute;
   width: 18em;
   height: 18em;
-  min-width: 18em;
-  min-height: 18em;
-  margin: 1em;
 }
 
 .card {
@@ -17,16 +14,14 @@
   cursor: pointer;
   will-change: transform, opacity;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   backface-visibility: hidden;
-  box-shadow: 0 8px 12px 0 hsla(0, 0%, 0%, 0.4);
+  box-shadow: 4px 6px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 
 .card__content {
   display: flex;
-  justify-content: center;
-  align-items: center;
   border: none;
   text-align: left;
   vertical-align: middle;
@@ -36,6 +31,7 @@
   color: #fefefe;
   font-size: 1.4em;
   padding: 1.8em;
+  padding-top: 0em;
 }
 
 .back,

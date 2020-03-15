@@ -25,6 +25,19 @@ export default function Deck({
     handleDeckNameChange(name, id);
   };
 
+  const width = 19;
+
+  const transitions = useTransition(
+    cards.map((item, i) => ({ ...item, x: i * width })),
+    item => item.id,
+    {
+      from: { opacity: 0 },
+      leave: { opacity: 0 },
+      enter: ({ x }) => ({ x, opacity: 1 }),
+      update: ({ x }) => ({ x, opacity: 1 })
+    }
+  );
+
   const cardList = cards.map(card => {
     return (
       <Card
@@ -48,9 +61,26 @@ export default function Deck({
       />
       <div className="deck__actions-menu">
         <button onClick={onClickAddCard}>Add card</button>
-        <button>Start Study</button>
+        <button>Shuffle</button>
       </div>
-      <div className="deck__card-list">{cardList}</div>
+      <div className="deck__card-list">
+        {transitions.map(({ item, props: { x, ...rest }, key }, index) => (
+          <a.div
+            key={key}
+            className="card-container"
+            style={{
+              transform: x.interpolate(x => `translate3d(${x}em,0,0)`),
+              ...rest
+            }}
+          >
+            <Card
+              {...item}
+              handleEditCard={handleEditCard}
+              handleDeleteCard={handleDeleteCard}
+            ></Card>
+          </a.div>
+        ))}
+      </div>
       <div className="divider"></div>
     </div>
   );

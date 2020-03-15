@@ -4,6 +4,7 @@
 body {
   display: flex;
   justify-content: center;
+  background-color: ivory;
 }
 
 .app {
@@ -12,7 +13,7 @@ body {
 
 .header {
   width: 100%;
-  border: 1px solid coral;
+  border-bottom: 1px solid coral;
   display: flex;
   justify-content: space-between;
   align-items: center;
