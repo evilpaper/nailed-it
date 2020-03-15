@@ -4,7 +4,7 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: ivory;
+  background-color: g;
 }
 
 .app {
@@ -13,7 +13,7 @@ body {
 
 .header {
   width: 100%;
-  border-bottom: 1px solid coral;
+  border-bottom: 1px solid #05061a;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,14 +22,13 @@ body {
 
 button {
   background-color: transparent;
-  border: 2px solid coral;
+  border: 2px solid #05061a;
   border-radius: 2em;
   line-height: 2em;
   margin-left: 1em;
   padding-left: 1.6em;
   padding-right: 1.6em;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
+  font-weight: 700;
 }
 
 button:hover {
@@ -42,7 +41,7 @@ button:focus {
 }
 
 h2 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1em;
   vertical-align: baseline;
   line-height: 2em;
