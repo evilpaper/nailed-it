@@ -63,8 +63,12 @@ export default function Deck({
         maxLength="30"
       />
       <div className="deck__actions-menu">
-        <button onClick={onClickAddCard}>Add card</button>
-        <button onClick={onClickShuffleDeck}>Shuffle</button>
+        <button className="deck__add-card" onClick={onClickAddCard}>
+          Add card
+        </button>
+        <button className="deck__shuffle-cards" onClick={onClickShuffleDeck}>
+          Shuffle
+        </button>
       </div>
       <div className="deck__card-list">
         {transitions.map(({ item, props: { x, ...rest }, key }, index) => (

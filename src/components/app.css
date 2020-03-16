@@ -4,7 +4,8 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: g;
+  background-color: floralwhite;
+  font-family: Helvetica, sans-serif;
 }
 
 .app {
@@ -13,7 +14,7 @@ body {
 
 .header {
   width: 100%;
-  border-bottom: 1px solid #05061a;
+  border-bottom: 1px solid gainsboro;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,17 +23,19 @@ body {
 
 button {
   background-color: transparent;
-  border: 2px solid #05061a;
+  border: 1px solid #05061a;
   border-radius: 2em;
   line-height: 2em;
   margin-left: 1em;
   padding-left: 1.6em;
   padding-right: 1.6em;
-  font-weight: 700;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  color: #05061a;
 }
 
 button:hover {
-  background-color: coral;
+  background-color: #05061a;
   color: whitesmoke;
 }
 
@@ -48,11 +51,17 @@ h2 {
 }
 
 .divider {
-  background-color: coral;
+  background-color: gainsboro;
   width: 100%;
   height: 1px;
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+#sign-in {
+  text-transform: uppercase;
+  line-height: 2em;
+  font-size: 0.8em;
 }
 
 @media (max-width: 599px) {

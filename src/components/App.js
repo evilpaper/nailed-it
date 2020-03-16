@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
-import nailedItLogo from "./nailed-it-logo-filled.svg";
+import nailedItLogo from "./nailed-it-logo.svg";
 import START_DECKS from "./START_DECKS";
 
 const LOCAL_STORAGE_KEY = "nailed-it.decks";

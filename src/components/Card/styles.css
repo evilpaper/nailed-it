@@ -36,7 +36,7 @@
 
 .back,
 .card__content--back {
-  background-color: antiquewhite;
+  background-color: white;
   color: #05061a;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .card__delete:hover {
-  background-color: antiquewhite;
+  background-color: white;
   border-color: #05061a;
   color: #05061a;
 }
@@ -72,7 +72,7 @@
 .card__delete--back:hover {
   background-color: #05061a;
   border-color: #05061a;
-  color: antiquewhite;
+  color: white;
 }
 
 .card__edit {
@@ -119,7 +119,7 @@
 }
 
 .card__flip:hover {
-  background-color: antiquewhite;
+  background-color: white;
   border-color: #05061a;
   color: #05061a;
 }
