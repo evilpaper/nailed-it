@@ -5,6 +5,7 @@ export default function Decks({
   decks,
   addCardToDeck,
   removeCardFromDeck,
+  shuffleDeck,
   handleCardContentChange,
   handleDeckNameChange
 }) {
@@ -15,6 +16,7 @@ export default function Decks({
         {...deck}
         addCardToDeck={addCardToDeck}
         removeCardFromDeck={removeCardFromDeck}
+        shuffleDeck={shuffleDeck}
         handleCardContentChange={handleCardContentChange}
         handleDeckNameChange={handleDeckNameChange}
       />

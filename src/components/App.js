@@ -42,6 +42,24 @@ export default function App() {
     setDecks(newDecks);
   };
 
+  const shuffleDeck = deckID => {
+    console.log("You shuffled");
+    const newDecks = [...decks];
+    const index = newDecks.findIndex(d => d.id === deckID);
+    const deckToShuffle = newDecks[index].cards;
+    console.log(deckToShuffle);
+    for (let i = deckToShuffle.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [deckToShuffle[i], deckToShuffle[j]] = [
+        deckToShuffle[j],
+        deckToShuffle[i]
+      ];
+    }
+    console.log(deckToShuffle);
+    newDecks[index].cards = deckToShuffle;
+    setDecks(newDecks);
+  };
+
   const handleCardContentChange = (changes, cardID, deckID) => {
     const newDecks = [...decks];
     const deckIndex = newDecks.findIndex(d => d.id === deckID);
@@ -70,6 +88,7 @@ export default function App() {
         decks={decks}
         addCardToDeck={addCardToDeck}
         removeCardFromDeck={removeCardFromDeck}
+        shuffleDeck={shuffleDeck}
         handleCardContentChange={handleCardContentChange}
         handleDeckNameChange={handleDeckNameChange}
       />

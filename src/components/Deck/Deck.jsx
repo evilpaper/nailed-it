@@ -8,10 +8,13 @@ export default function Deck({
   id,
   addCardToDeck,
   removeCardFromDeck,
+  shuffleDeck,
   handleCardContentChange,
   handleDeckNameChange
 }) {
   const onClickAddCard = () => addCardToDeck(id);
+
+  const onClickShuffleDeck = () => shuffleDeck(id);
 
   const handleEditCard = (changes, card) => {
     handleCardContentChange(changes, card, id);
@@ -61,7 +64,7 @@ export default function Deck({
       />
       <div className="deck__actions-menu">
         <button onClick={onClickAddCard}>Add card</button>
-        <button>Shuffle</button>
+        <button onClick={onClickShuffleDeck}>Shuffle</button>
       </div>
       <div className="deck__card-list">
         {transitions.map(({ item, props: { x, ...rest }, key }, index) => (
