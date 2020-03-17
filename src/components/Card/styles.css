@@ -15,7 +15,8 @@
   will-change: transform, opacity;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: start;
+  padding-top: 4em;
   backface-visibility: hidden;
   box-shadow: 4px 6px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
