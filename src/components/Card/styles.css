@@ -27,12 +27,14 @@
 
 .card__content {
   -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   border: none;
   resize: none;
   cursor: pointer;
+  text-align: left;
+  height: 100%;
   background-color: #05061a;
   color: #fefefe;
   font-size: 2em;

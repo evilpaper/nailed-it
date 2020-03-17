@@ -49,7 +49,7 @@ export default function Card({
           name="answer"
           defaultValue={answer}
           onChange={e => handleChange({ answer: e.target.value })}
-          maxLength="240"
+          maxLength="100"
         ></textarea>
         <button className="card__flip card__flip--back" onClick={onFlipCard}>
           flip
@@ -74,7 +74,7 @@ export default function Card({
           name="question"
           defaultValue={question}
           onChange={e => handleChange({ question: e.target.value })}
-          maxLength="240"
+          maxLength="100"
         ></textarea>
         <button className="card__flip" onClick={onFlipCard}>
           flip
