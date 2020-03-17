@@ -26,17 +26,13 @@
 }
 
 .card__content {
-  display: flex;
   border: none;
-  text-align: left;
-  vertical-align: middle;
   resize: none;
   cursor: pointer;
   background-color: #05061a;
   color: #fefefe;
-  font-size: 1.4em;
-  padding-top: 0em;
   font-size: 2em;
+  -webkit-appearance: textfield;
 }
 
 .back,
