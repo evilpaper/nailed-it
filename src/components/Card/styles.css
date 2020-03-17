@@ -19,6 +19,10 @@
   padding-top: 4em;
   backface-visibility: hidden;
   box-shadow: 4px 6px 6px 0 hsla(0, 0%, 0%, 0.2);
+  color: #fefefe;
+  flex-direction: column;
+  padding: 1.8em;
+  font-size: 0.8em;
 }
 
 .card__content {
@@ -31,8 +35,8 @@
   background-color: #05061a;
   color: #fefefe;
   font-size: 1.4em;
-  padding: 1.8em;
   padding-top: 0em;
+  font-size: 2em;
 }
 
 .back,

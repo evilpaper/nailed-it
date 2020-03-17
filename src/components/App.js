@@ -22,8 +22,8 @@ export default function App() {
   class Card {
     constructor() {
       this.id = nanoid();
-      this.question = "Question";
-      this.answer = "Answer";
+      this.question = "Insert question here...";
+      this.answer = "Insert answer here...";
     }
   }
 
