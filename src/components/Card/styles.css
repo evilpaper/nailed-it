@@ -26,6 +26,7 @@
 }
 
 .card__content {
+  width: inherit;
   border: none;
   resize: none;
   cursor: pointer;
