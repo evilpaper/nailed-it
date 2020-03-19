@@ -64,6 +64,10 @@ h2 {
   font-size: 0.8em;
 }
 
+.add-deck {
+  margin-bottom: 6em;
+}
+
 @media (max-width: 599px) {
   .app {
     width: 100vw;

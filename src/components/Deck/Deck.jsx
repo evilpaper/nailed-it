@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../Card";
 import { animated as a, useTransition } from "react-spring";
+import { FiEdit2 } from "react-icons/fi";
 
 export default function Deck({
   cards,

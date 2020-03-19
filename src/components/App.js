@@ -3,6 +3,7 @@ import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
 import nailedItLogo from "./nailed-it-logo-peach.svg";
+
 import START_DECKS from "./START_DECKS";
 
 const LOCAL_STORAGE_KEY = "nailed-it.decks";
@@ -22,10 +23,24 @@ export default function App() {
   class Card {
     constructor() {
       this.id = nanoid();
-      this.question = "Insert question here...";
-      this.answer = "Insert answer here...";
+      this.question = "Click or tap me to edit...";
+      this.answer = "Click or tap me to edit...";
     }
   }
+
+  class Deck {
+    constructor() {
+      this.id = nanoid();
+      this.name = "My New Deck";
+      this.cards = [];
+    }
+  }
+
+  const addDeck = () => {
+    const newDeck = new Deck();
+    const newDecks = [...decks, newDeck];
+    setDecks(newDecks);
+  };
 
   const addCardToDeck = deckID => {
     const newCard = new Card();
@@ -92,6 +107,9 @@ export default function App() {
         handleCardContentChange={handleCardContentChange}
         handleDeckNameChange={handleDeckNameChange}
       />
+      <button className="add-deck" onClick={addDeck}>
+        Add deck
+      </button>
     </div>
   );
 }
