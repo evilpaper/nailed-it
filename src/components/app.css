@@ -4,7 +4,11 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: floralwhite;
+  background-image: radial-gradient(
+    70% 70% at 50% 100%,
+    #e8e8e8 0%,
+    #fafafa 100%
+  );
   font-family: Helvetica, sans-serif;
 }
 
@@ -23,7 +27,7 @@ body {
 
 button {
   background-color: transparent;
-  border: 1px solid #05061a;
+  border: 1px solid #ced4d9;
   border-radius: 2em;
   line-height: 2em;
   margin-left: 1em;
@@ -31,11 +35,11 @@ button {
   padding-right: 1.6em;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-  color: #05061a;
+  color: #030508;
 }
 
 button:hover {
-  background-color: #05061a;
+  background-color: #030508;
   color: whitesmoke;
 }
 

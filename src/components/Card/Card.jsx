@@ -67,7 +67,7 @@ export default function Card({
         <button className="card__delete" onClick={onDeleteCard}>
           <FiTrash2 />
         </button>
-        <p>Question</p>
+        <p className="card__front--header">Question</p>
         <textarea
           className="card__content"
           id="question"
