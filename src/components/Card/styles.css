@@ -6,8 +6,7 @@
 
 .card {
   position: absolute;
-  background-color: #030508;
-  background-color: dodgerblue;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
   border-radius: 6%;
   text-align: center;
   width: 100%;
@@ -19,7 +18,7 @@
   align-items: start;
   padding-top: 4em;
   backface-visibility: hidden;
-  box-shadow: 0px 6px 8px 0 hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0px 6px 10px 0 hsla(0, 0%, 0%, 0.2);
   color: white;
   flex-direction: column;
   padding: 1.8em;
@@ -38,8 +37,7 @@
   height: 76%;
   padding: 0;
   margin: 0;
-  background-color: #030508;
-  background-color: dodgerblue;
+  background: transparent;
   color: white;
   font-size: 2.4em;
   line-height: 1.1em;
@@ -51,16 +49,11 @@
 
 .back,
 .card__content--back {
-  background-color: white;
-  color: #05061a;
+  background: transparent;
 }
 
 .card__content:focus {
   outline: 0;
-}
-
-.card__front--header {
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .card__delete {
@@ -74,8 +67,8 @@
   padding: 0.6em;
   margin: 0;
   font-size: 1em;
-  color: #fefefe;
-  border-color: rgba(255, 255, 255, 0.5);
+  color: #a79ea0;
+  border-color: #a79ea0;
 }
 
 .card__delete:hover {
@@ -132,25 +125,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.6em;
+  margin: 0;
   font-size: 1em;
-  height: 2.4em;
   color: #fefefe;
-  border-color: rgba(255, 255, 255, 0.5);
+  background-color: #08b28c;
+  border: 1px solid #08b28c;
 }
 
 .card__flip:hover {
   background-color: white;
-  border-color: #05061a;
-  color: #05061a;
-}
-
-.card__flip--back {
-  border-color: #898989;
-  color: #030508;
-}
-
-.card__flip--back:hover {
-  background-color: #05061a;
-  border-color: #05061a;
-  color: antiquewhite;
+  color: #08b28c;
 }

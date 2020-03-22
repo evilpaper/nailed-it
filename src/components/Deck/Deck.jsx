@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../Card";
 import { animated as a, useTransition } from "react-spring";
 import { FiEdit2 } from "react-icons/fi";
+import { FiPlus } from "react-icons/fi";
 
 export default function Deck({
   cards,
@@ -65,7 +66,7 @@ export default function Deck({
       />
       <div className="deck__actions-menu">
         <button className="deck__add-card" onClick={onClickAddCard}>
-          Add card
+          <FiPlus />
         </button>
         <button className="deck__shuffle-cards" onClick={onClickShuffleDeck}>
           Shuffle
@@ -89,7 +90,6 @@ export default function Deck({
           </a.div>
         ))}
       </div>
-      <div className="divider"></div>
     </div>
   );
 }

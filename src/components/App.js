@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
-import nailedItLogo from "./nailed-it-logo.svg";
+import nailedItLogo from "./nailed-it-logo-white.svg";
 
 import START_DECKS from "./START_DECKS";
 
@@ -95,7 +95,7 @@ export default function App() {
     <div className="app">
       <div className="header">
         <div className="logo">
-          <img src={nailedItLogo} alt="Nailed It" width="64" height="64"></img>
+          <img src={nailedItLogo} alt="Nailed It" width="54" height="54"></img>
         </div>
         <button id="sign-in">Sign in</button>
       </div>
@@ -107,9 +107,10 @@ export default function App() {
         handleCardContentChange={handleCardContentChange}
         handleDeckNameChange={handleDeckNameChange}
       />
-      <button className="add-deck" onClick={addDeck}>
+      {/*
+       <button className="add-deck" onClick={addDeck}>
         Add deck
-      </button>
+      </button>*/}
     </div>
   );
 }

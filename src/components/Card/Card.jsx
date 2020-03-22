@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { FiTrash2 } from "react-icons/fi";
+import { FiRotateCcw } from "react-icons/fi";
+import { FiRotateCw } from "react-icons/fi";
 
 export default function Card({
   question,
@@ -33,15 +35,13 @@ export default function Card({
     <div className="card-container">
       <a.div
         className="card back"
-        style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
+        style={{
+          opacity: opacity.interpolate(o => 1 - o),
+          transform
+          // backgroundImage: `url(${bg})`
+        }}
       >
         {" "}
-        <button
-          className="card__delete card__delete--back"
-          onClick={onDeleteCard}
-        >
-          <FiTrash2 />
-        </button>
         <p>Answer</p>
         <textarea
           className="card__content card__content--back"
@@ -52,7 +52,7 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <button className="card__flip card__flip--back" onClick={onFlipCard}>
-          flip
+          <FiRotateCcw />
         </button>
       </a.div>
 
@@ -61,6 +61,7 @@ export default function Card({
         style={{
           opacity,
           transform: transform.interpolate(t => `${t} rotateY(-180deg)`)
+          // backgroundImage: `url(${bg})`
         }}
       >
         {" "}
@@ -77,7 +78,7 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <button className="card__flip" onClick={onFlipCard}>
-          flip
+          <FiRotateCw />
         </button>
       </a.div>
     </div>

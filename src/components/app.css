@@ -1,14 +1,14 @@
 @import "./Deck/styles.css";
 @import "./Card/styles.css";
 
+html {
+  background-image: url("./todd-diemer.jpg");
+}
+
 body {
   display: flex;
   justify-content: center;
-  background-image: radial-gradient(
-    70% 70% at 50% 100%,
-    #e8e8e8 0%,
-    #fafafa 100%
-  );
+  background-color: rgba(0, 0, 0, 0.8);
   font-family: Helvetica, sans-serif;
 }
 
@@ -18,7 +18,9 @@ body {
 
 .header {
   width: 100%;
+  /*
   border-bottom: 1px solid gainsboro;
+  */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,6 +30,7 @@ body {
 button {
   background-color: transparent;
   border: 1px solid #ced4d9;
+  color: #ced4d9;
   border-radius: 2em;
   line-height: 2em;
   margin-left: 1em;
@@ -35,7 +38,6 @@ button {
   padding-right: 1.6em;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-  color: #030508;
 }
 
 button:hover {
