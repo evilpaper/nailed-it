@@ -66,10 +66,10 @@ export default function Deck({
       />
       <div className="deck__actions-menu">
         <button className="deck__add-card" onClick={onClickAddCard}>
-          <FiPlus />
+          Add card
         </button>
         <button className="deck__shuffle-cards" onClick={onClickShuffleDeck}>
-          Shuffle
+          Shuffle deck
         </button>
       </div>
       <div className="deck__card-list">
