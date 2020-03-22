@@ -3,6 +3,7 @@
 
 html {
   background-image: url("./todd-diemer.jpg");
+  background-size: cover;
 }
 
 body {
