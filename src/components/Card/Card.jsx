@@ -42,7 +42,7 @@ export default function Card({
         }}
       >
         {" "}
-        <p>Answer</p>
+        <p className="card__header">Answer</p>
         <textarea
           className="card__content card__content--back"
           id="answer"
@@ -68,7 +68,7 @@ export default function Card({
         <button className="card__delete" onClick={onDeleteCard}>
           <FiTrash2 />
         </button>
-        <p className="card__front--header">Question</p>
+        <p className="card__header">Question</p>
         <textarea
           className="card__content"
           id="question"

@@ -6,7 +6,7 @@
 
 .card {
   position: absolute;
-  border: 1px dashed rgba(255, 255, 255, 0.4);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
   border-radius: 6%;
   text-align: center;
   width: 100%;
@@ -47,6 +47,10 @@
   -webkit-appearance: textfield;
 }
 
+.card__header {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .back,
 .card__content--back {
   background: transparent;
@@ -68,7 +72,8 @@
   margin: 0;
   font-size: 1em;
   color: #a79ea0;
-  border-color: #a79ea0;
+  color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .card__delete:hover {
@@ -78,7 +83,7 @@
 }
 
 .card__delete--back {
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.2);
   color: #05061a;
 }
 
@@ -128,12 +133,14 @@
   padding: 0.6em;
   margin: 0;
   font-size: 1em;
+  font-weight: 700;
   color: #fefefe;
   background-color: #08b28c;
   border: 1px solid #08b28c;
 }
 
 .card__flip:hover {
-  background-color: white;
-  color: #08b28c;
+  background-color: transparent;
+  color: white;
+  border-color: white;
 }

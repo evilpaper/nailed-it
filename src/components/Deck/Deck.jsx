@@ -1,8 +1,9 @@
 import React from "react";
 import Card from "../Card";
 import { animated as a, useTransition } from "react-spring";
-import { FiEdit2 } from "react-icons/fi";
 import { FiPlus } from "react-icons/fi";
+import { TiFlash } from "react-icons/ti";
+import { TiPlus } from "react-icons/ti";
 
 export default function Deck({
   cards,
@@ -66,10 +67,10 @@ export default function Deck({
       />
       <div className="deck__actions-menu">
         <button className="deck__add-card" onClick={onClickAddCard}>
-          Add card
+          <TiPlus />
         </button>
         <button className="deck__shuffle-cards" onClick={onClickShuffleDeck}>
-          Shuffle deck
+          <TiFlash />
         </button>
       </div>
       <div className="deck__card-list">
