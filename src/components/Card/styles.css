@@ -71,56 +71,14 @@
   padding: 0.6em;
   margin: 0;
   font-size: 1em;
-  color: #a79ea0;
-  color: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .card__delete:hover {
-  background-color: white;
-  border-color: #05061a;
-  color: #05061a;
-}
-
-.card__delete--back {
-  border-color: rgba(0, 0, 0, 0.2);
-  color: #05061a;
-}
-
-.card__delete--back:hover {
-  background-color: #05061a;
-  border-color: #05061a;
   color: white;
-}
-
-.card__edit {
-  position: absolute;
-  top: 1em;
-  right: 4em;
-  padding-left: 0.6em;
-  padding-right: 0.6em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.6em;
-  font-size: 0.8em;
-}
-
-.card__edit:hover {
-  background-color: antiquewhite;
-  border-color: #05061a;
-  color: #05061a;
-}
-
-.card__edit--back {
-  border-color: #bcbdd2;
-  color: #05061a;
-}
-
-.card__edit--back:hover {
-  background-color: #05061a;
-  border-color: #05061a;
-  color: antiquewhite;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .card__flip {
@@ -134,13 +92,12 @@
   margin: 0;
   font-size: 1em;
   font-weight: 700;
+  border: none;
   color: rgba(255, 255, 255, 0.6);
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .card__flip:hover {
-  background-color: transparent;
   color: white;
-  border-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
 }

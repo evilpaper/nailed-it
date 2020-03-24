@@ -23,8 +23,8 @@ export default function App() {
   class Card {
     constructor() {
       this.id = nanoid();
-      this.question = "Click or tap me to edit...";
-      this.answer = "Click or tap me to edit...";
+      this.question = "...";
+      this.answer = "...";
     }
   }
 

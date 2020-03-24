@@ -65,9 +65,7 @@ export default function Deck({
         onChange={e => handleEditDeckName(e.target.value)}
         maxLength="30"
       />
-      <p className="deck__stats">
-        {cards.length} cards | You have nailed it to 0 %
-      </p>
+      <p className="deck__stats">{cards.length} cards | Nailed it so far 0 %</p>
       <div className="deck__actions-menu">
         <button className="deck__add-card" onClick={onClickAddCard}>
           <TiPlus />
