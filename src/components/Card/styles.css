@@ -134,9 +134,9 @@
   margin: 0;
   font-size: 1em;
   font-weight: 700;
-  color: #fefefe;
-  background-color: #08b28c;
-  border: 1px solid #08b28c;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .card__flip:hover {

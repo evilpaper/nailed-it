@@ -7,7 +7,8 @@
 
 /* Remove default padding */
 ul[class],
-ol[class] {
+ol[class],
+input {
   padding: 0;
 }
 
@@ -25,7 +26,8 @@ figure,
 figcaption,
 blockquote,
 dl,
-dd {
+dd,
+input {
   margin: 0;
 }
 
