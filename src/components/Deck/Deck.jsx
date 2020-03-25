@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "../Card";
 import { animated as a, useTransition } from "react-spring";
-import { FiPlus } from "react-icons/fi";
 import { TiFlash } from "react-icons/ti";
 import { TiPlus } from "react-icons/ti";
 
@@ -68,11 +67,11 @@ export default function Deck({
       <p className="deck__stats">{cards.length} cards | Nailed it so far 0 %</p>
       <div className="deck__actions-menu">
         <button className="deck__add-card" onClick={onClickAddCard}>
-          <TiPlus />
+          <TiPlus className="deck__button-icon" />
           Add
         </button>
         <button className="deck__shuffle-cards" onClick={onClickShuffleDeck}>
-          <TiFlash />
+          <TiFlash className="deck__button-icon" />
           Shuffle
         </button>
       </div>

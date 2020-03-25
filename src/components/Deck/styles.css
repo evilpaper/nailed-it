@@ -25,9 +25,8 @@
   margin-left: 14.4px;
   margin-bottom: 0.5em;
   color: #faecef;
-  font-weight: 700;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.8em;
+  font-size: 14px;
 }
 
 .deck__actions-menu {
@@ -51,10 +50,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  font-size: 0.8em;
-  font-weight: 700;
   color: #fefefe;
-  font-size: 0.8em;
   padding-left: 0.6em;
   padding-right: 1em;
   padding-top: 0.2em;
@@ -63,4 +59,9 @@
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   margin-right: 1.6em;
+  font-size: 14px;
+}
+
+.deck__button-icon {
+  margin-right: 0.3em;
 }

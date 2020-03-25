@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
-import { FiTrash2 } from "react-icons/fi";
-import { FiRotateCcw } from "react-icons/fi";
-import { FiRotateCw } from "react-icons/fi";
+import { TiTrash } from "react-icons/ti";
+import { TiArrowBack } from "react-icons/ti";
+import { TiArrowForward } from "react-icons/ti";
+import { TiStar } from "react-icons/ti";
 
 export default function Card({
   question,
@@ -42,6 +43,10 @@ export default function Card({
         }}
       >
         {" "}
+        <button className="card__nailed-it">
+          <TiStar className="card__button-icon" />
+          Nailed It
+        </button>
         <p className="card__header">Answer</p>
         <textarea
           className="card__content card__content--back"
@@ -52,7 +57,7 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <button className="card__flip card__flip--back" onClick={onFlipCard}>
-          <FiRotateCcw />
+          <TiArrowBack />
         </button>
       </a.div>
 
@@ -66,7 +71,7 @@ export default function Card({
       >
         {" "}
         <button className="card__delete" onClick={onDeleteCard}>
-          <FiTrash2 />
+          <TiTrash />
         </button>
         <p className="card__header">Question</p>
         <textarea
@@ -78,7 +83,7 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <button className="card__flip" onClick={onFlipCard}>
-          <FiRotateCw />
+          <TiArrowForward />
         </button>
       </a.div>
     </div>
