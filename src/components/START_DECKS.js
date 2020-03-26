@@ -8,7 +8,8 @@ const START_DECKS = [
       {
         id: nanoid(),
         question: "Question",
-        answer: "Answer"
+        answer: "Answer",
+        nailed: false
       }
     ]
   }

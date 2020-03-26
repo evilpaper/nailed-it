@@ -4,11 +4,13 @@ import { TiTrash } from "react-icons/ti";
 import { TiArrowBack } from "react-icons/ti";
 import { TiArrowForward } from "react-icons/ti";
 import { TiStar } from "react-icons/ti";
+import { TiStarOutline } from "react-icons/ti";
 
 export default function Card({
   question,
   answer,
   id,
+  nailed,
   handleEditCard,
   handleDeleteCard
 }) {
@@ -39,7 +41,6 @@ export default function Card({
         style={{
           opacity: opacity.interpolate(o => 1 - o),
           transform
-          // backgroundImage: `url(${bg})`
         }}
       >
         {" "}
@@ -66,10 +67,16 @@ export default function Card({
         style={{
           opacity,
           transform: transform.interpolate(t => `${t} rotateY(-180deg)`)
-          // backgroundImage: `url(${bg})`
         }}
       >
         {" "}
+        <div className="card__star">
+          {nailed ? (
+            <TiStar className="card__button-icon" />
+          ) : (
+            <TiStarOutline className="card__button-icon" />
+          )}
+        </div>
         <button className="card__delete" onClick={onDeleteCard}>
           <TiTrash />
         </button>

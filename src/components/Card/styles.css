@@ -123,3 +123,13 @@
 .card__button-icon {
   margin-right: 0.3em;
 }
+
+.card__star {
+  position: absolute;
+  top: 1.6em;
+  right: 1.6em;
+  padding: 0.6em;
+  font-size: 14px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.2);
+}

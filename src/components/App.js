@@ -25,6 +25,7 @@ export default function App() {
       this.id = nanoid();
       this.question = "...";
       this.answer = "...";
+      this.nailed = false;
     }
   }
 
@@ -58,11 +59,9 @@ export default function App() {
   };
 
   const shuffleDeck = deckID => {
-    console.log("You shuffled");
     const newDecks = [...decks];
     const index = newDecks.findIndex(d => d.id === deckID);
     const deckToShuffle = newDecks[index].cards;
-    console.log(deckToShuffle);
     for (let i = deckToShuffle.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       [deckToShuffle[i], deckToShuffle[j]] = [
@@ -70,7 +69,6 @@ export default function App() {
         deckToShuffle[i]
       ];
     }
-    console.log(deckToShuffle);
     newDecks[index].cards = deckToShuffle;
     setDecks(newDecks);
   };
