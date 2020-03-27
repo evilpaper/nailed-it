@@ -48,7 +48,7 @@ export default function Card({
           <TiStar className="card__button-icon" />
           Nailed It
         </button>
-        <p className="card__header">Answer</p>
+        <p className="card__header card__header--back">Answer</p>
         <textarea
           className="card__content card__content--back"
           id="answer"
@@ -70,13 +70,15 @@ export default function Card({
         }}
       >
         {" "}
-        <div className="card__star">
+        {/*  
+          <div className="card__star">
           {nailed ? (
             <TiStar className="card__button-icon" />
           ) : (
             <TiStarOutline className="card__button-icon" />
           )}
         </div>
+        */}
         <button className="card__delete" onClick={onDeleteCard}>
           <TiTrash />
         </button>
