@@ -61,9 +61,8 @@ h2 {
 }
 
 #sign-in {
-  text-transform: uppercase;
   line-height: 2em;
-  font-size: 14px;
+  font-size: 1em;
   padding-left: 1.6em;
   padding-right: 1.6em;
   padding-top: 0.2em;
@@ -71,6 +70,7 @@ h2 {
   background-color: #ff1747;
   border: none;
   color: white;
+  letter-spacing: 0.6px;
 }
 
 .add-deck {
