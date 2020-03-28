@@ -62,11 +62,9 @@ h2 {
 
 #sign-in {
   line-height: 2em;
-  font-size: 1em;
+  font-size: 0.8em;
   padding-left: 1.6em;
   padding-right: 1.6em;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
   background-color: #ff1747;
   border: none;
   color: white;

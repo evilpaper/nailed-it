@@ -12,7 +12,7 @@
   text-align: left;
   cursor: pointer;
   background-color: transparent;
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: 700;
   color: #faecef;
 }
@@ -48,19 +48,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
   color: #fefefe;
-  padding-left: 0.6em;
-  padding-right: 1em;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  font-size: 1em;
+  padding: 0.6em;
   color: rgba(255, 255, 255, 0.6);
   background-color: rgba(255, 255, 255, 0.02);
   border: none;
-  margin-right: 1.6em;
-  font-size: 14px;
-}
-
-.deck__button-icon {
-  margin-right: 0.3em;
+  margin-right: 0.6em;
 }

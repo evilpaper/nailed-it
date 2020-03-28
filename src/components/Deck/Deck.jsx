@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../Card";
 import { animated as a, useTransition } from "react-spring";
-import { TiFlash } from "react-icons/ti";
+import { TiArrowShuffle } from "react-icons/ti";
 import { TiPlus } from "react-icons/ti";
 
 export default function Deck({
@@ -64,15 +64,13 @@ export default function Deck({
         onChange={e => handleEditDeckName(e.target.value)}
         maxLength="30"
       />
-      <p className="deck__stats">{cards.length} cards | Nailed it so far 0 %</p>
+      <p className="deck__stats">0 % of {cards.length} cards nailed</p>
       <div className="deck__actions-menu">
         <button className="deck__add-card" onClick={onClickAddCard}>
           <TiPlus className="deck__button-icon" />
-          Add
         </button>
         <button className="deck__shuffle-cards" onClick={onClickShuffleDeck}>
-          <TiFlash className="deck__button-icon" />
-          Shuffle
+          <TiArrowShuffle className="deck__button-icon" />
         </button>
       </div>
       <div className="deck__card-list">
