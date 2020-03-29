@@ -3,6 +3,7 @@ import Card from "../Card";
 import { animated as a, useTransition } from "react-spring";
 import { TiArrowShuffle } from "react-icons/ti";
 import { TiPlus } from "react-icons/ti";
+import { TiPen } from "react-icons/ti";
 
 export default function Deck({
   cards,
@@ -54,6 +55,13 @@ export default function Deck({
     );
   });
 
+  const percentageNailed = () => {
+    const nailedCards = cards.filter(card => card.nailed === true);
+    const result = (nailedCards.length / cards.length) * 100;
+    console.log(result);
+    return result;
+  };
+
   return (
     <div className="deck">
       <input
@@ -64,13 +72,20 @@ export default function Deck({
         onChange={e => handleEditDeckName(e.target.value)}
         maxLength="30"
       />
-      <p className="deck__stats">0 % of {cards.length} cards nailed</p>
+      <p className="deck__stats">
+        {`You have nailed ${percentageNailed()} % · Deck consist of ${
+          cards.length
+        } cards`}
+      </p>
       <div className="deck__actions-menu">
         <button className="deck__add-card" onClick={onClickAddCard}>
           <TiPlus className="deck__button-icon" />
         </button>
         <button className="deck__shuffle-cards" onClick={onClickShuffleDeck}>
           <TiArrowShuffle className="deck__button-icon" />
+        </button>
+        <button className="deck__edit-deck-name">
+          <TiPen className="deck__button-icon" />
         </button>
       </div>
       <div className="deck__card-list">

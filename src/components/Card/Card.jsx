@@ -44,7 +44,10 @@ export default function Card({
         }}
       >
         {" "}
-        <button className="card__nailed-it">
+        <button
+          className="card__nailed-it"
+          onClick={e => handleChange({ nailed: !nailed })}
+        >
           <TiStar className="card__button-icon" />
           Nailed It
         </button>

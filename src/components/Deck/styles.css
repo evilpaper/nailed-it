@@ -22,8 +22,9 @@
 }
 
 .deck__stats {
-  margin-left: 14.4px;
-  margin-bottom: 0.5em;
+  margin-left: 16px;
+  margin-bottom: 1em;
+  margin-top: 0.2em;
   color: #faecef;
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
@@ -44,7 +45,8 @@
 }
 
 .deck__add-card,
-.deck__shuffle-cards {
+.deck__shuffle-cards,
+.deck__edit-deck-name {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,4 +57,8 @@
   background-color: rgba(255, 255, 255, 0.02);
   border: none;
   margin-right: 0.6em;
+}
+
+.deck__add-card {
+  background-color: rgba(255, 255, 255, 0.2);
 }
