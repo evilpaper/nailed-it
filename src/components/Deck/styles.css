@@ -30,6 +30,10 @@
   font-size: 14px;
 }
 
+.deck__stats--percentage {
+  color: #ff1747;
+}
+
 .deck__actions-menu {
   display: flex;
   padding-left: 1em;
