@@ -40,9 +40,11 @@
 }
 
 .deck__card-list {
+  z-index: 2;
   display: flex;
   position: relative;
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   height: 20em;
   padding: 1em;

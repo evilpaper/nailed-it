@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
-import nailedItLogo from "./nailed-it-logo-white.svg";
+import nailedItLogo from "./../images/nailed-it-logo-white.svg";
 
 import START_DECKS from "./START_DECKS";
 
@@ -104,6 +104,7 @@ export default function App() {
         shuffleDeck={shuffleDeck}
         handleCardContentChange={handleCardContentChange}
         handleDeckNameChange={handleDeckNameChange}
+        addDeck={addDeck}
       />
       {/*
        <button className="add-deck" onClick={addDeck}>

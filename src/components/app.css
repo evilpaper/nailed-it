@@ -1,13 +1,6 @@
-@import "./reset.css";
+@import "./../utilities/reset.css";
 @import "./Deck/styles.css";
 @import "./Card/styles.css";
-
-html {
-  /*
-  background-image: url("./todd-diemer.jpg");
-  background-size: cover;
-  */
-}
 
 body {
   display: flex;

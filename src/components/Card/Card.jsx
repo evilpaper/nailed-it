@@ -4,7 +4,6 @@ import { FiTrash } from "react-icons/fi";
 import { TiArrowBack } from "react-icons/ti";
 import { TiArrowForward } from "react-icons/ti";
 import { TiStar } from "react-icons/ti";
-import { TiStarOutline } from "react-icons/ti";
 
 export default function Card({
   question,

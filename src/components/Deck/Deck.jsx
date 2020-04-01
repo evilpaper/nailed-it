@@ -44,21 +44,9 @@ export default function Deck({
     }
   );
 
-  const cardList = cards.map(card => {
-    return (
-      <Card
-        key={card.id}
-        {...card}
-        handleEditCard={handleEditCard}
-        handleDeleteCard={handleDeleteCard}
-      />
-    );
-  });
-
   const percentageNailed = () => {
     const nailedCards = cards.filter(card => card.nailed === true);
     const result = (nailedCards.length / cards.length) * 100;
-    console.log(result);
     return result;
   };
 
