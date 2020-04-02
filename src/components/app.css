@@ -65,7 +65,14 @@ h2 {
 }
 
 .add-deck {
-  margin-bottom: 6em;
+  line-height: 2em;
+  font-size: 0.8em;
+  padding-left: 1.6em;
+  padding-right: 1.6em;
+  background-color: white;
+  border: none;
+  color: black;
+  letter-spacing: 0.6px;
 }
 
 @media (max-width: 599px) {

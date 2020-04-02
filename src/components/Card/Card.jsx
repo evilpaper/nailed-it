@@ -60,10 +60,10 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <button className="card__flip card__flip--back" onClick={onFlipCard}>
-          <TiArrowBack />
+          {/*<TiArrowBack />*/}
+          flip
         </button>
       </a.div>
-
       <a.div
         className="card front"
         style={{
@@ -72,15 +72,6 @@ export default function Card({
         }}
       >
         {" "}
-        {/*  
-          <div className="card__star">
-          {nailed ? (
-            <TiStar className="card__button-icon" />
-          ) : (
-            <TiStarOutline className="card__button-icon" />
-          )}
-        </div>
-        */}
         <button className="card__delete" onClick={onDeleteCard}>
           <FiTrash />
         </button>
@@ -94,7 +85,8 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <button className="card__flip" onClick={onFlipCard}>
-          <TiArrowForward />
+          {/* <TiArrowForward /> */}
+          flip
         </button>
       </a.div>
     </div>

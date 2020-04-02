@@ -97,6 +97,9 @@ export default function App() {
         </div>
         <button id="sign-in">Sign in</button>
       </div>
+      <button className="add-deck" onClick={addDeck}>
+        Create deck
+      </button>
       <Decks
         decks={decks}
         addCardToDeck={addCardToDeck}
@@ -106,10 +109,6 @@ export default function App() {
         handleDeckNameChange={handleDeckNameChange}
         addDeck={addDeck}
       />
-      {/*
-       <button className="add-deck" onClick={addDeck}>
-        Add deck
-      </button>*/}
     </div>
   );
 }

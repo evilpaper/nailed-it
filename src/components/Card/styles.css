@@ -75,13 +75,11 @@
   justify-content: center;
   align-items: center;
   padding: 1em;
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 0;
   border: none;
-  color: rgba(255, 255, 255, 0.8);
-  /*
-  background-color: rgba(255, 255, 255, 0.1);
-  */
+  color: rgba(255, 255, 255, 0.4);
+  color: dimgray;
 }
 
 .card__delete:hover {
@@ -91,19 +89,20 @@
 
 .card__flip {
   position: absolute;
-  bottom: 1em;
-  right: 1em;
+  bottom: 1.6em;
+  right: 1.6em;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
-  font-size: 1.2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  font-size: 14px;
   margin: 0;
   border: none;
-  color: rgba(255, 255, 255, 0.8);
-  /*
-  background-color: rgba(255, 255, 255, 0.1);
-  */
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
 }
 
 .card__flip:hover {
@@ -132,14 +131,4 @@
 
 .card__button-icon {
   margin-right: 0.3em;
-}
-
-.card__star {
-  position: absolute;
-  top: 1.6em;
-  right: 1.6em;
-  padding: 0.6em;
-  font-size: 14px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.2);
 }
