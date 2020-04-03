@@ -100,6 +100,7 @@ export default function App() {
       <button className="add-deck" onClick={addDeck}>
         Create deck
       </button>
+
       <Decks
         decks={decks}
         addCardToDeck={addCardToDeck}

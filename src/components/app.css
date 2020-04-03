@@ -46,10 +46,11 @@ h2 {
 }
 
 .divider {
-  background-color: gainsboro;
-  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 98%;
   height: 1px;
-  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1em;
 }
 
@@ -61,7 +62,7 @@ h2 {
   background-color: #ff1747;
   border: none;
   color: white;
-  letter-spacing: 0.6px;
+  font-weight: 600;
 }
 
 .add-deck {
@@ -72,7 +73,10 @@ h2 {
   background-color: white;
   border: none;
   color: black;
-  letter-spacing: 0.6px;
+  font-weight: 600;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  margin-top: 0.4em;
 }
 
 @media (max-width: 599px) {

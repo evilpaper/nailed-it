@@ -52,6 +52,7 @@ export default function Deck({
 
   return (
     <div className="deck">
+      <div className="divider"></div>
       <input
         type="text"
         name="deck-name"
