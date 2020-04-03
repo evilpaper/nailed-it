@@ -23,8 +23,8 @@ export default function App() {
   class Card {
     constructor() {
       this.id = nanoid();
-      this.question = "...";
-      this.answer = "...";
+      this.question = "A question";
+      this.answer = "An answer ";
       this.nailed = false;
     }
   }
@@ -32,14 +32,14 @@ export default function App() {
   class Deck {
     constructor() {
       this.id = nanoid();
-      this.name = "My New Deck";
-      this.cards = [];
+      this.name = "My Dang Deck";
+      this.cards = [new Card()];
     }
   }
 
   const addDeck = () => {
     const newDeck = new Deck();
-    const newDecks = [...decks, newDeck];
+    const newDecks = [newDeck, ...decks];
     setDecks(newDecks);
   };
 

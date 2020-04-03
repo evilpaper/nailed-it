@@ -47,7 +47,7 @@ export default function Deck({
   const percentageNailed = () => {
     const nailedCards = cards.filter(card => card.nailed === true);
     const result = Math.round((nailedCards.length / cards.length) * 100);
-    return result;
+    return result === typeof number ? result : 0;
   };
 
   return (
