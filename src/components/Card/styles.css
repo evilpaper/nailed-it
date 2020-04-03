@@ -53,13 +53,10 @@
   text-align: left;
 }
 
-.back .card__header {
-  text-align: right;
+.card__header--back {
 }
 
-.back,
 .card__content--back {
-  text-align: right;
 }
 
 .card__content:focus {
@@ -78,7 +75,7 @@
   font-size: 1em;
   margin: 0;
   border: none;
-  color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.02);
   color: dimgray;
 }
 
@@ -102,6 +99,7 @@
   margin: 0;
   border: none;
   color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 .card__flip:hover {

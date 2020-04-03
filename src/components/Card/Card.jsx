@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
-import { FiTrash } from "react-icons/fi";
-import { TiArrowBack } from "react-icons/ti";
-import { TiArrowForward } from "react-icons/ti";
+import { FiTrash2 } from "react-icons/fi";
 import { TiStar } from "react-icons/ti";
 
 export default function Card({
@@ -73,7 +71,7 @@ export default function Card({
       >
         {" "}
         <button className="card__delete" onClick={onDeleteCard}>
-          <FiTrash />
+          <FiTrash2 />
         </button>
         <p className="card__header">Question</p>
         <textarea

@@ -4,6 +4,7 @@ import { animated as a, useTransition } from "react-spring";
 import { TiArrowShuffle } from "react-icons/ti";
 import { TiPlus } from "react-icons/ti";
 import { TiPen } from "react-icons/ti";
+import { FiTrash2 } from "react-icons/fi";
 
 export default function Deck({
   cards,
@@ -47,7 +48,8 @@ export default function Deck({
   const percentageNailed = () => {
     const nailedCards = cards.filter(card => card.nailed === true);
     const result = Math.round((nailedCards.length / cards.length) * 100);
-    return result === typeof number ? result : 0;
+    console.log(result);
+    return result;
   };
 
   return (
@@ -73,6 +75,9 @@ export default function Deck({
         </button>
         <button className="deck__edit-deck-name">
           <TiPen className="deck__button-icon" />
+        </button>
+        <button className="deck__delete-deck">
+          <FiTrash2 className="deck__button-icon" />
         </button>
       </div>
       <div className="deck__card-list">

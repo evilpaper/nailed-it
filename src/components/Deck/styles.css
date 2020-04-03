@@ -52,7 +52,8 @@
 
 .deck__add-card,
 .deck__shuffle-cards,
-.deck__edit-deck-name {
+.deck__edit-deck-name,
+.deck__delete-deck {
   display: flex;
   justify-content: center;
   align-items: center;
