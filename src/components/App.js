@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
-import nailedItLogo from "./../images/nailed-it-logo-dark.svg";
+import nailedItLogo from "./../images/nailed-it-logo-light.svg";
 
 import START_DECKS from "./START_DECKS";
 
@@ -100,27 +100,33 @@ export default function App() {
   return (
     <div className="app">
       <div className="header">
-        <div className="logo">
-          <img src={nailedItLogo} alt="Nailed It" width="54" height="54"></img>
-        </div>
-        <div className="header__right-part">
+        <div className="header__left-part">
           {" "}
-          <button className="add-deck" onClick={addDeck}>
-            Create deck
-          </button>
-          <button id="sign-in">Sign in</button>
+          <div className="logo">
+            <img
+              src={nailedItLogo}
+              alt="Nailed It"
+              width="48"
+              height="48"
+            ></img>
+          </div>
         </div>
+        <button id="sign-in">Sign in</button>
       </div>
-
-      <Decks
-        decks={decks}
-        addCardToDeck={addCardToDeck}
-        removeCardFromDeck={removeCardFromDeck}
-        shuffleDeck={shuffleDeck}
-        handleCardContentChange={handleCardContentChange}
-        handleDeckNameChange={handleDeckNameChange}
-        deleteDeck={deleteDeck}
-      />
+      <div className="main">
+        <button className="add-deck" onClick={addDeck}>
+          Create deck
+        </button>
+        <Decks
+          decks={decks}
+          addCardToDeck={addCardToDeck}
+          removeCardFromDeck={removeCardFromDeck}
+          shuffleDeck={shuffleDeck}
+          handleCardContentChange={handleCardContentChange}
+          handleDeckNameChange={handleDeckNameChange}
+          deleteDeck={deleteDeck}
+        />
+      </div>
     </div>
   );
 }
