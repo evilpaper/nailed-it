@@ -3,12 +3,12 @@ import nanoid from "nanoid";
 const START_DECKS = [
   {
     id: nanoid(),
-    name: "My Dang Deck",
+    name: "My first deck · Click to edit",
     cards: [
       {
         id: nanoid(),
-        question: "A question",
-        answer: "An answer",
+        question: "Click to edit",
+        answer: "Click to edit",
         nailed: false
       }
     ]

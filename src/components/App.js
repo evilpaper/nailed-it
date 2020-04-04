@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
-import nailedItLogo from "./../images/nailed-it-logo-white.svg";
+import nailedItLogo from "./../images/nailed-it-logo-dark.svg";
 
 import START_DECKS from "./START_DECKS";
 
@@ -23,15 +23,15 @@ export default function App() {
   class Card {
     constructor() {
       this.id = nanoid();
-      this.question = "A question";
-      this.answer = "An answer ";
+      this.question = "Click to edit";
+      this.answer = "Click to edit";
       this.nailed = false;
     }
   }
   class Deck {
     constructor() {
       this.id = nanoid();
-      this.name = "My Dang Deck";
+      this.name = "Click to edit";
       this.cards = [new Card()];
     }
   }
@@ -42,35 +42,37 @@ export default function App() {
     setDecks(newDecks);
   };
 
-  const deleteDeck = deckID => {
-    const newDecks = [...decks].filter(d => d.id !== deckID);
+  const deleteDeck = (deckID) => {
+    const newDecks = [...decks].filter((d) => d.id !== deckID);
     setDecks(newDecks);
   };
 
-  const addCardToDeck = deckID => {
+  const addCardToDeck = (deckID) => {
     const newCard = new Card();
     const newDecks = [...decks];
-    const index = newDecks.findIndex(d => d.id === deckID);
+    const index = newDecks.findIndex((d) => d.id === deckID);
     newDecks[index].cards = [newCard, ...newDecks[index].cards];
     setDecks(newDecks);
   };
 
   const removeCardFromDeck = (cardID, deckID) => {
     const newDecks = [...decks];
-    const index = newDecks.findIndex(d => d.id === deckID);
-    newDecks[index].cards = newDecks[index].cards.filter(c => c.id !== cardID);
+    const index = newDecks.findIndex((d) => d.id === deckID);
+    newDecks[index].cards = newDecks[index].cards.filter(
+      (c) => c.id !== cardID
+    );
     setDecks(newDecks);
   };
 
-  const shuffleDeck = deckID => {
+  const shuffleDeck = (deckID) => {
     const newDecks = [...decks];
-    const index = newDecks.findIndex(d => d.id === deckID);
+    const index = newDecks.findIndex((d) => d.id === deckID);
     const deckToShuffle = newDecks[index].cards;
     for (let i = deckToShuffle.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       [deckToShuffle[i], deckToShuffle[j]] = [
         deckToShuffle[j],
-        deckToShuffle[i]
+        deckToShuffle[i],
       ];
     }
     newDecks[index].cards = deckToShuffle;
@@ -79,8 +81,10 @@ export default function App() {
 
   const handleCardContentChange = (changes, cardID, deckID) => {
     const newDecks = [...decks];
-    const deckIndex = newDecks.findIndex(d => d.id === deckID);
-    const cardIndex = newDecks[deckIndex].cards.findIndex(c => c.id === cardID);
+    const deckIndex = newDecks.findIndex((d) => d.id === deckID);
+    const cardIndex = newDecks[deckIndex].cards.findIndex(
+      (c) => c.id === cardID
+    );
     const newCard = newDecks[deckIndex].cards[cardIndex];
     newDecks[deckIndex].cards[cardIndex] = { ...newCard, ...changes };
     setDecks(newDecks);
@@ -88,7 +92,7 @@ export default function App() {
 
   const handleDeckNameChange = (name, deckID) => {
     const newDecks = [...decks];
-    const index = newDecks.findIndex(d => d.id === deckID);
+    const index = newDecks.findIndex((d) => d.id === deckID);
     newDecks[index].name = name;
     setDecks(newDecks);
   };
@@ -96,21 +100,16 @@ export default function App() {
   return (
     <div className="app">
       <div className="header">
-        <div className="header__left-part">
+        <div className="logo">
+          <img src={nailedItLogo} alt="Nailed It" width="54" height="54"></img>
+        </div>
+        <div className="header__right-part">
           {" "}
-          <div className="logo">
-            <img
-              src={nailedItLogo}
-              alt="Nailed It"
-              width="54"
-              height="54"
-            ></img>
-          </div>
           <button className="add-deck" onClick={addDeck}>
             Create deck
           </button>
+          <button id="sign-in">Sign in</button>
         </div>
-        <button id="sign-in">Sign in</button>
       </div>
 
       <Decks

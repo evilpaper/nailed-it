@@ -15,7 +15,7 @@ export default function Deck({
   shuffleDeck,
   handleCardContentChange,
   handleDeckNameChange,
-  deleteDeck
+  deleteDeck,
 }) {
   const onClickAddCard = () => addCardToDeck(id);
 
@@ -27,11 +27,11 @@ export default function Deck({
     handleCardContentChange(changes, card, id);
   };
 
-  const handleDeleteCard = card => {
+  const handleDeleteCard = (card) => {
     removeCardFromDeck(card, id);
   };
 
-  const handleEditDeckName = name => {
+  const handleEditDeckName = (name) => {
     handleDeckNameChange(name, id);
   };
 
@@ -39,17 +39,17 @@ export default function Deck({
 
   const transitions = useTransition(
     cards.map((item, i) => ({ ...item, x: i * width })),
-    item => item.id,
+    (item) => item.id,
     {
       from: { opacity: 0 },
       leave: { opacity: 0 },
       enter: ({ x }) => ({ x, opacity: 1 }),
-      update: ({ x }) => ({ x, opacity: 1 })
+      update: ({ x }) => ({ x, opacity: 1 }),
     }
   );
 
   const percentageNailed = () => {
-    const nailedCards = cards.filter(card => card.nailed === true);
+    const nailedCards = cards.filter((card) => card.nailed === true);
     const result = Math.round((nailedCards.length / cards.length) * 100);
     console.log(result);
     return result;
@@ -57,13 +57,14 @@ export default function Deck({
 
   return (
     <div className="deck">
-      <div className="divider"></div>
+      {/* <div className="divider"></div> */}
+
       <input
         type="text"
         name="deck-name"
         className="deck__name"
         defaultValue={name}
-        onChange={e => handleEditDeckName(e.target.value)}
+        onChange={(e) => handleEditDeckName(e.target.value)}
         maxLength="30"
       />
       <p className="deck__stats">
@@ -76,9 +77,11 @@ export default function Deck({
         <button className="deck__shuffle-cards" onClick={onClickShuffleDeck}>
           <TiArrowShuffle className="deck__button-icon" />
         </button>
+        {/* 
         <button className="deck__edit-deck-name">
           <TiPen className="deck__button-icon" />
         </button>
+        */}
         <button className="deck__delete-deck" onClick={onClickDeleteDeck}>
           <FiTrash2 className="deck__button-icon" />
         </button>
@@ -89,8 +92,8 @@ export default function Deck({
             key={key}
             className="card-container"
             style={{
-              transform: x.interpolate(x => `translate3d(${x}em,0,0)`),
-              ...rest
+              transform: x.interpolate((x) => `translate3d(${x}em,0,0)`),
+              ...rest,
             }}
           >
             <Card

@@ -53,10 +53,17 @@
   text-align: left;
 }
 
+.back {
+  background-color: white;
+  color: black;
+}
+
 .card__header--back {
+  color: black;
 }
 
 .card__content--back {
+  color: black;
 }
 
 .card__content:focus {
