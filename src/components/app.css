@@ -19,6 +19,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1em;
+  padding-top: 2em;
+}
+
+.header__left-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
@@ -74,9 +81,7 @@ h2 {
   border: none;
   color: black;
   font-weight: 600;
-  margin-left: 1em;
-  margin-bottom: 1em;
-  margin-top: 0.4em;
+  margin-left: 6em;
 }
 
 @media (max-width: 599px) {

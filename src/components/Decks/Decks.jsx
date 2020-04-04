@@ -7,7 +7,8 @@ export default function Decks({
   removeCardFromDeck,
   shuffleDeck,
   handleCardContentChange,
-  handleDeckNameChange
+  handleDeckNameChange,
+  deleteDeck
 }) {
   const deckList = decks.map(deck => {
     return (
@@ -19,6 +20,7 @@ export default function Decks({
         shuffleDeck={shuffleDeck}
         handleCardContentChange={handleCardContentChange}
         handleDeckNameChange={handleDeckNameChange}
+        deleteDeck={deleteDeck}
       />
     );
   });

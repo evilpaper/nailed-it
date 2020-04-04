@@ -14,11 +14,14 @@ export default function Deck({
   removeCardFromDeck,
   shuffleDeck,
   handleCardContentChange,
-  handleDeckNameChange
+  handleDeckNameChange,
+  deleteDeck
 }) {
   const onClickAddCard = () => addCardToDeck(id);
 
   const onClickShuffleDeck = () => shuffleDeck(id);
+
+  const onClickDeleteDeck = () => deleteDeck(id);
 
   const handleEditCard = (changes, card) => {
     handleCardContentChange(changes, card, id);
@@ -76,7 +79,7 @@ export default function Deck({
         <button className="deck__edit-deck-name">
           <TiPen className="deck__button-icon" />
         </button>
-        <button className="deck__delete-deck">
+        <button className="deck__delete-deck" onClick={onClickDeleteDeck}>
           <FiTrash2 className="deck__button-icon" />
         </button>
       </div>

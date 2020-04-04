@@ -28,7 +28,6 @@ export default function App() {
       this.nailed = false;
     }
   }
-
   class Deck {
     constructor() {
       this.id = nanoid();
@@ -40,6 +39,11 @@ export default function App() {
   const addDeck = () => {
     const newDeck = new Deck();
     const newDecks = [newDeck, ...decks];
+    setDecks(newDecks);
+  };
+
+  const deleteDeck = deckID => {
+    const newDecks = [...decks].filter(d => d.id !== deckID);
     setDecks(newDecks);
   };
 
@@ -92,14 +96,22 @@ export default function App() {
   return (
     <div className="app">
       <div className="header">
-        <div className="logo">
-          <img src={nailedItLogo} alt="Nailed It" width="54" height="54"></img>
+        <div className="header__left-part">
+          {" "}
+          <div className="logo">
+            <img
+              src={nailedItLogo}
+              alt="Nailed It"
+              width="54"
+              height="54"
+            ></img>
+          </div>
+          <button className="add-deck" onClick={addDeck}>
+            Create deck
+          </button>
         </div>
         <button id="sign-in">Sign in</button>
       </div>
-      <button className="add-deck" onClick={addDeck}>
-        Create deck
-      </button>
 
       <Decks
         decks={decks}
@@ -108,7 +120,7 @@ export default function App() {
         shuffleDeck={shuffleDeck}
         handleCardContentChange={handleCardContentChange}
         handleDeckNameChange={handleDeckNameChange}
-        addDeck={addDeck}
+        deleteDeck={deleteDeck}
       />
     </div>
   );
