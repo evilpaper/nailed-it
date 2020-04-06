@@ -3,7 +3,6 @@ import Card from "../Card";
 import { animated as a, useTransition } from "react-spring";
 import { TiArrowShuffle } from "react-icons/ti";
 import { TiPlus } from "react-icons/ti";
-import { TiPen } from "react-icons/ti";
 import { FiTrash2 } from "react-icons/fi";
 
 export default function Deck({
