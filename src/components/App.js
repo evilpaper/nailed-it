@@ -127,6 +127,11 @@ export default function App() {
           deleteDeck={deleteDeck}
         />
       </div>
+      <div className="footer">
+        <p>
+          <strong>Nailed It</strong> is created by Pelle Lundgren
+        </p>
+      </div>
     </div>
   );
 }

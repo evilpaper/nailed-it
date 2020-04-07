@@ -37,6 +37,12 @@ body {
   margin-left: 10em;
 }
 
+.footer {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8em;
+  padding: 6em;
+}
+
 button {
   background-color: transparent;
   border: 1px solid #ced4d9;
