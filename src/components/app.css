@@ -84,10 +84,9 @@ h2 {
   padding-right: 1.6em;
   padding-top: 0.4em;
   padding-bottom: 0.4em;
-  background-color: #ff2281;
   border: none;
   color: white;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .add-deck {
@@ -102,7 +101,7 @@ h2 {
   */
   border: none;
   color: white;
-  font-weight: 600;
+  font-weight: 700;
   margin-left: 1.4em;
   display: flex;
   justify-content: center;
