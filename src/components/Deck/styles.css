@@ -6,13 +6,11 @@
 }
 
 .deck__name {
-  margin-top: 0.4em;
-  margin-left: 0.5em;
   border: none;
   text-align: left;
   cursor: pointer;
   background-color: transparent;
-  font-size: 2em;
+  font-size: 4em;
   font-weight: 700;
   color: white;
 }
@@ -22,12 +20,9 @@
 }
 
 .deck__stats {
-  margin-left: 16px;
   margin-bottom: 1em;
-  margin-top: 0.2em;
   color: #faecef;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .deck__stats--percentage {
@@ -36,7 +31,7 @@
 
 .deck__actions-menu {
   display: flex;
-  padding-left: 1em;
+  margin-bottom: 0.4em;
 }
 
 .deck__card-list {
@@ -60,15 +55,8 @@
   font-size: 1em;
   padding: 0.6em;
   color: rgba(255, 255, 255, 0.6);
-  /*
-  background-color: rgba(255, 255, 255, 0.02);
-  */
   border: none;
   margin-right: 0.6em;
-}
-
-.deck__add-card {
-  /*
-  background-color: rgba(255, 255, 255, 0.2);
-  */
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 20%;
 }
