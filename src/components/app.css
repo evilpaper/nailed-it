@@ -40,7 +40,8 @@ body {
 .footer {
   color: rgba(255, 255, 255, 0.3);
   font-size: 0.8em;
-  padding: 6em;
+  padding-top: 6em;
+  padding-bottom: 6em;
 }
 
 button {
@@ -96,10 +97,27 @@ h2 {
   padding-right: 1.6em;
   padding-top: 0.4em;
   padding-bottom: 0.4em;
+  /*
   border: 2px solid rgba(255, 255, 255, 0.3);
+  */
+  border: none;
   color: white;
   font-weight: 600;
-  margin-left: 1.2em;
+  margin-left: 1.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  font-size: 14px;
+  border: none;
+  background-color: #ff2281;
+}
+
+.add-deck__icon {
+  margin-right: 0.4em;
 }
 
 @media (max-width: 599px) {

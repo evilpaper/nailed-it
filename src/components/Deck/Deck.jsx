@@ -67,7 +67,8 @@ export default function Deck({
         maxLength="30"
       />
       <p className="deck__stats">
-        {`${percentageNailed()}% nailed · ${cards.length} cards`}
+        <strong>{`${percentageNailed()}%`}</strong>
+        {` nailed · ${cards.length} cards`}
       </p>
       <div className="deck__actions-menu">
         <button className="deck__add-card" onClick={onClickAddCard}>

@@ -3,6 +3,7 @@ import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
 import nailedItLogo from "./../images/nailed-it-logo-light.svg";
+import { TiTabsOutline } from "react-icons/ti";
 
 import START_DECKS from "./START_DECKS";
 
@@ -115,7 +116,7 @@ export default function App() {
       </div>
       <div className="main">
         <button className="add-deck" onClick={addDeck}>
-          Create deck
+          <TiTabsOutline className="add-deck__icon"/> Create deck
         </button>
         <Decks
           decks={decks}

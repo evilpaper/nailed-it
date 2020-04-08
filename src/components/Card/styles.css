@@ -140,3 +140,7 @@
 .card__button-icon {
   margin-right: 0.3em;
 }
+
+.card__answer-button--icon {
+  margin-left: 0.4em;
+}

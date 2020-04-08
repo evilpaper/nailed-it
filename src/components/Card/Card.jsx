@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { FiTrash2 } from "react-icons/fi";
 import { TiStar } from "react-icons/ti";
-import { TiArrowForward } from "react-icons/ti";
+import { TiArrowRightThick } from "react-icons/ti";
 
 export default function Card({
   question,
@@ -46,7 +46,6 @@ export default function Card({
           className="card__nailed-it"
           onClick={(e) => handleChange({ nailed: !nailed })}
         >
-          <TiStar className="card__button-icon" />
           Nailed It
         </button>
         <p className="card__header card__header--back">Answer</p>
@@ -84,8 +83,8 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <button className="card__flip" onClick={onFlipCard}>
-          <TiArrowForward />
-          flip
+          Answer
+          <TiArrowRightThick className="card__answer-button--icon"/>
         </button>
       </a.div>
     </div>
