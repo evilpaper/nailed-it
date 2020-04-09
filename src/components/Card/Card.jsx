@@ -47,7 +47,14 @@ export default function Card({
           onClick={(e) => handleChange({ nailed: !nailed })}
         >
           <TiStar />
-          Nailed It
+          Yes
+        </button>
+        <button
+          className="card__nailed-it"
+          onClick={(e) => handleChange({ nailed: !nailed })}
+        >
+          <TiStar />
+          No
         </button>
         <p className="card__header card__header--back">Answer</p>
         <textarea
@@ -59,7 +66,7 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <button className="card__flip card__flip--back" onClick={onFlipCard}>
-          Question
+          Back
           <TiArrowRightThick className="card__question-button--icon" />
         </button>
       </a.div>
@@ -73,6 +80,7 @@ export default function Card({
         {" "}
         <button className="card__delete" onClick={onDeleteCard}>
           <FiTrash2 />
+          Remove
         </button>
         <p className="card__header">Question</p>
         <textarea

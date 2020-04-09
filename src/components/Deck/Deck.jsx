@@ -68,7 +68,8 @@ export default function Deck({
       />
       <p className="deck__stats">
         <strong>{`${percentageNailed()}%`}</strong>
-        {` nailed · ${cards.length} cards`}
+        {` nailed`}
+        <span className="deck__stats--number-of-cards">{` · ${cards.length} cards`}</span>
       </p>
       <div className="deck__actions-menu">
         <button className="deck__add-card" onClick={onClickAddCard}>
@@ -77,11 +78,6 @@ export default function Deck({
         <button className="deck__shuffle-cards" onClick={onClickShuffleDeck}>
           <TiArrowShuffle className="deck__button-icon" />
         </button>
-        {/* 
-        <button className="deck__edit-deck-name">
-          <TiPen className="deck__button-icon" />
-        </button>
-        */}
         <button className="deck__delete-deck" onClick={onClickDeleteDeck}>
           <FiTrash2 className="deck__button-icon" />
         </button>
