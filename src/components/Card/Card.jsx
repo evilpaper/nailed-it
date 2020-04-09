@@ -79,7 +79,6 @@ export default function Card({
       >
         {" "}
         <button className="card__delete" onClick={onDeleteCard}>
-          <FiTrash2 />
           Remove
         </button>
         <p className="card__header">Question</p>
@@ -92,7 +91,7 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <button className="card__flip" onClick={onFlipCard}>
-          Answer
+          See answer
           <TiArrowRightThick className="card__answer-button--icon" />
         </button>
       </a.div>
