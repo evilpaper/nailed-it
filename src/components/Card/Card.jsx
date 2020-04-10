@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
-import { FiTrash2 } from "react-icons/fi";
-import { TiStar } from "react-icons/ti";
+import { TiTrash } from "react-icons/ti";
+import { TiTick } from "react-icons/ti";
+import { TiTimes } from "react-icons/ti";
 import { TiArrowRightThick } from "react-icons/ti";
 
 export default function Card({
@@ -43,18 +44,20 @@ export default function Card({
       >
         {" "}
         <button
-          className="card__nailed-it"
-          onClick={(e) => handleChange({ nailed: !nailed })}
+          className="card__button--yes"
+          onClick={(e) => handleChange({ nailed: true })}
         >
-          <TiStar />
-          Yes
+          <TiTick />
+          Nailed it
         </button>
         <button
-          className="card__nailed-it"
-          onClick={(e) => handleChange({ nailed: !nailed })}
+          className="card__button--no"
+          onClick={(e) => {
+            handleChange({ nailed: false });
+          }}
         >
-          <TiStar />
-          No
+          <TiTimes />
+          Fail
         </button>
         <p className="card__header card__header--back">Answer</p>
         <textarea
@@ -79,7 +82,8 @@ export default function Card({
       >
         {" "}
         <button className="card__delete" onClick={onDeleteCard}>
-          Remove
+          <TiTrash />
+          Delete
         </button>
         <p className="card__header">Question</p>
         <textarea

@@ -6,7 +6,7 @@
 
 .card {
   position: absolute;
-  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 6%;
   text-align: center;
   width: 100%;
@@ -18,7 +18,7 @@
   align-items: flex-start;
   padding-top: 4em;
   backface-visibility: hidden;
-  box-shadow: 0px 6px 10px 0 hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0px 6px 10px 0 hsla(0, 0%, 0%, 0.4);
   color: white;
   flex-direction: column;
   padding: 1.8em;
@@ -72,14 +72,16 @@
 
 .card__delete {
   position: absolute;
-  z-index: 10;
-  bottom: 1em;
-  left: 1em;
+  bottom: 1.6em;
+  left: 1.2em;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
-  font-size: 1em;
+  padding-left: 0.6em;
+  padding-right: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  font-size: 14px;
   margin: 0;
   border: none;
   color: rgba(255, 255, 255, 0.4);
@@ -105,9 +107,6 @@
   margin: 0;
   border: none;
   color: rgba(255, 255, 255, 0.4);
-  /*
-  background-color: rgba(255, 255, 255, 0.02);
-  */
 }
 
 .card__flip--back {
@@ -119,9 +118,9 @@
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.card__nailed-it {
+.card__button--yes,
+.card__button--no {
   position: absolute;
-  z-index: 10;
   bottom: 1.6em;
   left: 1.6em;
   display: flex;
@@ -138,8 +137,15 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.card__button-icon {
-  margin-right: 0.3em;
+.card__button--yes {
+  background-color: #ff2281;
+  color: white;
+}
+
+.card__button--no {
+  background-color: #f0fe58;
+  color: black;
+  left: 8em;
 }
 
 .card__answer-button--icon {

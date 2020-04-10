@@ -24,15 +24,15 @@ export default function App() {
   class Card {
     constructor() {
       this.id = nanoid();
-      this.question = "Click to edit";
-      this.answer = "Click to edit";
+      this.question = "Can you do it? · Click to edit this question";
+      this.answer = "Hell yes! · Click to edit this answer";
       this.nailed = false;
     }
   }
   class Deck {
     constructor() {
       this.id = nanoid();
-      this.name = "Click to edit";
+      this.name = "A Tricky Deck · Click to edit this title";
       this.cards = [new Card()];
     }
   }
@@ -116,7 +116,7 @@ export default function App() {
       </div>
       <div className="main">
         <button className="add-deck" onClick={addDeck}>
-          <TiTabsOutline className="add-deck__icon"/> Create deck
+          <TiTabsOutline className="add-deck__icon" /> Create deck
         </button>
         <Decks
           decks={decks}

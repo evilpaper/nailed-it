@@ -57,7 +57,7 @@ export default function Deck({
   return (
     <div className="deck">
       {/* <div className="divider"></div> */}
-      <div className="deck-name__divder"></div>
+      <div className="deck-name__divder">YOU CAN DO IT</div>
       <input
         type="text"
         name="deck-name"
@@ -67,9 +67,9 @@ export default function Deck({
         maxLength="30"
       />
       <p className="deck__stats">
-        <strong>{`${percentageNailed()}%`}</strong>
-        {` nailed`}
-        <span className="deck__stats--number-of-cards">{` · ${cards.length} cards`}</span>
+        <strong>{`${percentageNailed()}% `}</strong>
+        {``}
+        <span className="deck__stats--number-of-cards">{` nailed · ${cards.length} cards`}</span>
       </p>
       <div className="deck__actions-menu">
         <button className="deck__add-card" onClick={onClickAddCard}>
