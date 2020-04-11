@@ -57,7 +57,7 @@ export default function Card({
           }}
         >
           <TiTimes />
-          Fail
+          Failed
         </button>
         <p className="card__header card__header--back">Answer</p>
         <textarea
@@ -69,7 +69,6 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <button className="card__flip card__flip--back" onClick={onFlipCard}>
-          Back
           <TiArrowRightThick className="card__question-button--icon" />
         </button>
       </a.div>
@@ -82,7 +81,6 @@ export default function Card({
       >
         {" "}
         <button className="card__delete" onClick={onDeleteCard}>
-          <TiTrash />
           Delete
         </button>
         <p className="card__header">Question</p>
