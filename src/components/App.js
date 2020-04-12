@@ -24,8 +24,8 @@ export default function App() {
   class Card {
     constructor() {
       this.id = nanoid();
-      this.question = "Can you do it? · Click to edit question";
-      this.answer = "Hell yes! · Click to edit answer";
+      this.question = "Who is the coolest Marvel character? · Click to edit";
+      this.answer = "Spiderman · Click to edit";
       this.nailed = false;
     }
   }
@@ -132,6 +132,7 @@ export default function App() {
         <p>
           <strong>Nailed It</strong> is created by Pelle Lundgren
         </p>
+        <p>©2020 Pelle Lundgren. All Rights Reserved.</p>
       </div>
     </div>
   );
