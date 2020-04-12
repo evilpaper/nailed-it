@@ -1,8 +1,8 @@
 import React from "react";
 import Card from "../Card";
 import { animated as a, useTransition } from "react-spring";
-import { TiArrowShuffle } from "react-icons/ti";
-import { TiPlus } from "react-icons/ti";
+import { FiShuffle } from "react-icons/fi";
+import { FiPlus } from "react-icons/fi";
 import { FiTrash2 } from "react-icons/fi";
 
 export default function Deck({
@@ -72,13 +72,22 @@ export default function Deck({
         <span className="deck__stats--number-of-cards">{` nailed · ${cards.length} cards`}</span>
       </p>
       <div className="deck__actions-menu">
-        <button className="deck__add-card" onClick={onClickAddCard}>
-          <TiPlus className="deck__button-icon" />
+        <button
+          className="deck__action-button deck__add-card"
+          onClick={onClickAddCard}
+        >
+          <FiPlus className="deck__button-icon" />
         </button>
-        <button className="deck__shuffle-cards" onClick={onClickShuffleDeck}>
-          <TiArrowShuffle className="deck__button-icon" />
+        <button
+          className="deck__action-button deck__shuffle-cards"
+          onClick={onClickShuffleDeck}
+        >
+          <FiShuffle className="deck__button-icon" />
         </button>
-        <button className="deck__delete-deck" onClick={onClickDeleteDeck}>
+        <button
+          className="deck__action-button deck__delete-deck"
+          onClick={onClickDeleteDeck}
+        >
           <FiTrash2 className="deck__button-icon" />
         </button>
       </div>

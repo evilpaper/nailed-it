@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
-import { TiTrash } from "react-icons/ti";
-import { TiTick } from "react-icons/ti";
-import { TiTimes } from "react-icons/ti";
-import { TiArrowRightThick } from "react-icons/ti";
+import { FiTrash2 } from "react-icons/fi";
+import { FiCheck } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
+import { FiChevronRight } from "react-icons/fi";
 
 export default function Card({
   question,
@@ -43,22 +43,6 @@ export default function Card({
         }}
       >
         {" "}
-        <button
-          className="card__button--yes"
-          onClick={(e) => handleChange({ nailed: true })}
-        >
-          <TiTick />
-          Nailed it
-        </button>
-        <button
-          className="card__button--no"
-          onClick={(e) => {
-            handleChange({ nailed: false });
-          }}
-        >
-          <TiTimes />
-          Failed
-        </button>
         <p className="card__header card__header--back">Answer</p>
         <textarea
           className="card__content card__content--back"
@@ -68,9 +52,28 @@ export default function Card({
           onChange={(e) => handleChange({ answer: e.target.value })}
           maxLength="75"
         ></textarea>
-        <button className="card__flip card__flip--back" onClick={onFlipCard}>
-          <TiArrowRightThick className="card__question-button--icon" />
-        </button>
+        <footer className="card__footer">
+          <button
+            className="card__button card__button--back"
+            onClick={(e) => handleChange({ nailed: true })}
+          >
+            <FiCheck />
+          </button>
+          <button
+            className="card__button card__button--back"
+            onClick={(e) => {
+              handleChange({ nailed: false });
+            }}
+          >
+            <FiX />
+          </button>
+          <button
+            className="card__button card__button--flip card__button--back"
+            onClick={onFlipCard}
+          >
+            <FiChevronRight />
+          </button>
+        </footer>
       </a.div>
       <a.div
         className="card front"
@@ -80,9 +83,6 @@ export default function Card({
         }}
       >
         {" "}
-        <button className="card__delete" onClick={onDeleteCard}>
-          Delete
-        </button>
         <p className="card__header">Question</p>
         <textarea
           className="card__content"
@@ -92,10 +92,20 @@ export default function Card({
           onChange={(e) => handleChange({ question: e.target.value })}
           maxLength="75"
         ></textarea>
-        <button className="card__flip" onClick={onFlipCard}>
-          See answer
-          <TiArrowRightThick className="card__answer-button--icon" />
-        </button>
+        <footer className="card__footer">
+          <button
+            className="card__button card__button--delete"
+            onClick={onDeleteCard}
+          >
+            <FiTrash2 />
+          </button>
+          <button
+            className="card__button card__button--front-flip"
+            onClick={onFlipCard}
+          >
+            <FiChevronRight />
+          </button>
+        </footer>
       </a.div>
     </div>
   );

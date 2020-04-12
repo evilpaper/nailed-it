@@ -39,10 +39,6 @@
   font-size: 1em;
 }
 
-.deck__stats--percentage {
-  color: #ff1747;
-}
-
 .deck__stats--number-of-cards {
   color: rgba(255, 255, 255, 0.4);
 }
@@ -64,12 +60,11 @@
 
 .deck__add-card,
 .deck__shuffle-cards,
-.deck__edit-deck-name,
 .deck__delete-deck {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.1em;
   padding: 0.4em;
   border: none;
@@ -77,6 +72,18 @@
 }
 
 .deck__add-card {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   color: rgba(0, 0, 0, 1);
+}
+
+.deck__delete-deck {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.deck__action-button {
+  transition: all 0.16s ease-in-out;
+}
+
+.deck__action-button:hover {
+  transform: scale(1.3);
 }

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
-import nailedItLogo from "./../images/nailed-it-logo-bw.png";
-import { TiTabsOutline } from "react-icons/ti";
+import nailedItLogo from "./../images/nailed-it-logo.png";
+import { FiLayers } from "react-icons/fi";
 
 import START_DECKS from "./START_DECKS";
 
@@ -107,8 +107,8 @@ export default function App() {
             <img
               src={nailedItLogo}
               alt="Nailed It"
-              width="48px"
-              height="48px"
+              width="56px"
+              height="56px"
             ></img>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function App() {
       </div>
       <div className="main">
         <button className="add-deck" onClick={addDeck}>
-          <TiTabsOutline className="add-deck__icon" /> Create deck
+          <FiLayers className="add-deck__icon" /> Create deck
         </button>
         <Decks
           decks={decks}

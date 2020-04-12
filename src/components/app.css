@@ -46,15 +46,8 @@ body {
 
 button {
   background-color: transparent;
-  border: 1px solid #ced4d9;
-  color: #ced4d9;
   border-radius: 2em;
   line-height: 2em;
-}
-
-button:hover {
-  background-color: #030508;
-  color: whitesmoke;
 }
 
 button:focus {
@@ -66,15 +59,6 @@ h2 {
   font-size: 1em;
   vertical-align: baseline;
   line-height: 2em;
-}
-
-.divider {
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 98%;
-  height: 1px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
 }
 
 #sign-in {
@@ -91,29 +75,30 @@ h2 {
 
 .add-deck {
   line-height: 2em;
-  font-size: 0.8em;
-  padding-left: 1.6em;
-  padding-right: 1.6em;
+  padding-left: 1.4em;
+  padding-right: 1.8em;
   padding-top: 0.4em;
   padding-bottom: 0.4em;
-  border: none;
-  color: white;
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 1.2em;
-  padding-right: 1.2em;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  font-size: 14px;
-  border: none;
-  background-color: #ff2281;
+  font-size: 0.9em;
+  border: 1px solid #f46c37;
+  background-color: #f46c37;
+  color: white;
   margin-left: 12px;
 }
 
 .add-deck__icon {
-  margin-right: 0.4em;
+  margin-right: 0.2em;
+  font-size: 1.2em;
+}
+
+.add-deck:hover {
+  border: 1px solid #f46c37;
+  background-color: white;
+  color: #f46c37;
 }
 
 @media (max-width: 599px) {
