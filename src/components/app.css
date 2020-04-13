@@ -111,6 +111,10 @@ h2 {
   }
   .main {
     margin: 0;
-    padding-left: 1.2em;
+    padding-left: 1em;
+  }
+  .add-deck {
+    margin-top: 1.2em;
+    width: 90%;
   }
 }
