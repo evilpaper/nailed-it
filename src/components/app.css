@@ -65,6 +65,10 @@ h2 {
   line-height: 2em;
 }
 
+a {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 #sign-in {
   line-height: 2em;
   font-size: 0.8em;
@@ -92,6 +96,7 @@ h2 {
   background-color: #f46c37;
   color: white;
   margin-left: 12px;
+  margin-top: 2em;
 }
 
 .add-deck__icon {
@@ -114,7 +119,7 @@ h2 {
     padding-left: 1em;
   }
   .add-deck {
-    margin-top: 1.2em;
     width: 90%;
+    margin-top: 1.2em;
   }
 }

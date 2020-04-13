@@ -55,7 +55,10 @@ export default function Card({
         <footer className="card__footer">
           <button
             className="card__button card__button--back"
-            onClick={(e) => handleChange({ nailed: true })}
+            onClick={(e) => {
+              handleChange({ nailed: true });
+              onFlipCard();
+            }}
           >
             <FiCheck />
           </button>
@@ -63,6 +66,7 @@ export default function Card({
             className="card__button card__button--back"
             onClick={(e) => {
               handleChange({ nailed: false });
+              onFlipCard();
             }}
           >
             <FiX />

@@ -130,9 +130,10 @@ export default function App() {
       </div>
       <div className="footer">
         <p>
-          <strong>Nailed It</strong> is created by Pelle Lundgren
+          <strong>Nailed It</strong> is created by{" "}
+          <a href="https://evilpaper.com/">Pelle Lundgren</a>
         </p>
-        <p>©2020 Pelle Lundgren. All Rights Reserved.</p>
+        <a href="https://github.com/evilpaper/nailed-it">View on github</a>
       </div>
     </div>
   );
