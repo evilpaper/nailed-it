@@ -21,11 +21,11 @@ export default function Card({
     config: { mass: 5, tension: 600, friction: 60 },
   });
 
-  const onFlipCard = () => {
+  const handleFlipClick = () => {
     flip((flipped) => !flipped);
   };
 
-  const onDeleteCard = () => {
+  const handleDeleteClick = () => {
     handleDeleteCard(id);
   };
 
@@ -57,7 +57,7 @@ export default function Card({
             className="card__button card__button--back"
             onClick={(e) => {
               handleChange({ nailed: true });
-              onFlipCard();
+              handleFlipClick();
             }}
           >
             <FiCheck />
@@ -66,14 +66,14 @@ export default function Card({
             className="card__button card__button--back"
             onClick={(e) => {
               handleChange({ nailed: false });
-              onFlipCard();
+              handleFlipClick();
             }}
           >
             <FiX />
           </button>
           <button
             className="card__button card__button--flip card__button--back"
-            onClick={onFlipCard}
+            onClick={handleFlipClick}
           >
             <FiChevronRight />
           </button>
@@ -99,13 +99,13 @@ export default function Card({
         <footer className="card__footer">
           <button
             className="card__button card__button--delete"
-            onClick={onDeleteCard}
+            onClick={handleDeleteClick}
           >
             <FiTrash2 />
           </button>
           <button
             className="card__button card__button--front-flip"
-            onClick={onFlipCard}
+            onClick={handleFlipClick}
           >
             <FiChevronRight />
           </button>
