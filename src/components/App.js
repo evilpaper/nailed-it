@@ -43,7 +43,7 @@ export default function App() {
     setDecks(newDecks);
   };
 
-  const deleteDeck = (deckID) => {
+  const handleDeckDelete = (deckID) => {
     const newDecks = [...decks].filter((d) => d.id !== deckID);
     setDecks(newDecks);
   };
@@ -125,7 +125,7 @@ export default function App() {
           shuffleDeck={shuffleDeck}
           handleCardContentChange={handleCardContentChange}
           handleDeckNameChange={handleDeckNameChange}
-          deleteDeck={deleteDeck}
+          onDeckDelete={handleDeckDelete}
         />
       </div>
       <div className="footer">
