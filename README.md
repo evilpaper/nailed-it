@@ -20,7 +20,7 @@ npm run build
 
 ## Database
 
-Only local storage for now. Have plans to add it later.
+Only local storage for now.
 
 ## Contributions
 Contributions are welcome, especially pull-requests. There are a lot of ideas to implement, but less people when it come to code. This is why issues are for bugs only.
