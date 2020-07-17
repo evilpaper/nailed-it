@@ -1,9 +1,8 @@
-![Logo of the project](./src/images/nailed-it-logo.png)
-
+![Logo of the project](./src/images/nailed-it-logo-color.png)
 
 # Nailed It &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 
-Nailed It is a flash card app for, well...nailing things, like examans. 
+Nailed It is a flash card app for, well...nailing things, like tests or examinations. 
 
 Made for fun! [Try it out here](https://brave-mirzakhani-591aa2.netlify.app/)
 
