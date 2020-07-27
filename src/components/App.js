@@ -116,6 +116,9 @@ export default function App() {
               height="56px"
             ></img>
           </div>
+          <button className="add-deck" onClick={addDeck}>
+            <FiLayers className="add-deck__icon" /> Create new deck
+          </button>
         </div>
         {!isLoggedIn && (
           <button className="button-login" onClick={handleLoginClick}>
@@ -129,9 +132,6 @@ export default function App() {
         )}
       </div>
       <div className="main">
-        <button className="add-deck" onClick={addDeck}>
-          <FiLayers className="add-deck__icon" /> Create deck
-        </button>
         <Decks
           decks={decks}
           addCardToDeck={addCardToDeck}
