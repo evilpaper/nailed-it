@@ -88,10 +88,10 @@ a {
 
 .add-deck {
   line-height: 2em;
-  padding-left: 1.4em;
-  padding-right: 1.8em;
-  padding-top: 0.4em;
-  padding-bottom: 0.4em;
+  padding-left: 1em;
+  padding-right: 1.4em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -100,7 +100,7 @@ a {
   border: 1px solid #f46c37;
   background-color: #f46c37;
   color: white;
-  margin-left: 4em;
+  margin-left: 3em;
 }
 
 .add-deck__icon {
@@ -123,7 +123,5 @@ a {
     padding-left: 1em;
   }
   .add-deck {
-    width: 90%;
-    margin-top: 1.2em;
   }
 }

@@ -117,7 +117,8 @@ export default function App() {
             ></img>
           </div>
           <button className="add-deck" onClick={addDeck}>
-            <FiLayers className="add-deck__icon" /> Create new deck
+            <FiLayers className="add-deck__icon" />
+            New deck
           </button>
         </div>
         {!isLoggedIn && (
