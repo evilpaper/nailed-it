@@ -15,10 +15,11 @@
   text-align: left;
   cursor: pointer;
   background-color: transparent;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 700;
   color: white;
   margin-bottom: 0.2em;
+  word-wrap: normal;
 }
 
 .deck-name__divder {

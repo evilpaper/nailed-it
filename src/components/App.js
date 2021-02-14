@@ -121,7 +121,7 @@ export default function App() {
             New deck
           </button>
         </div>
-        {!isLoggedIn && (
+        {/* {!isLoggedIn && (
           <button className="button-login" onClick={handleLoginClick}>
             Log in
           </button>
@@ -130,7 +130,7 @@ export default function App() {
           <button className="button-login" onClick={handleLoginClick}>
             A great apprentice
           </button>
-        )}
+        )} */}
       </div>
       <div className="main">
         <Decks

@@ -50,14 +50,11 @@ export default function Deck({
   const percentageNailed = () => {
     const nailedCards = cards.filter((card) => card.nailed === true);
     const result = Math.round((nailedCards.length / cards.length) * 100);
-    console.log(result);
     return result;
   };
 
   return (
     <div className="deck">
-      {/* <div className="divider"></div> */}
-      <div className="deck-name__divder">YOU CAN DO IT</div>
       <input
         type="text"
         name="deck-name"
@@ -69,7 +66,7 @@ export default function Deck({
       <p className="deck__stats">
         <strong>{`${percentageNailed()}% `}</strong>
         {``}
-        <span className="deck__stats--number-of-cards">{` nailed · ${cards.length} cards`}</span>
+        <span className="deck__stats--number-of-cards">{` correct answers · ${cards.length} cards`}</span>
       </p>
       <div className="deck__actions-menu">
         <button
