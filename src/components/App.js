@@ -11,7 +11,7 @@ const LOCAL_STORAGE_KEY = "nailed-it.decks";
 
 export default function App() {
   const [decks, setDecks] = useState(START_DECKS);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const decksJSON = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -99,9 +99,9 @@ export default function App() {
     setDecks(newDecks);
   };
 
-  const handleLoginClick = () => {
-    setIsLoggedIn(!isLoggedIn);
-  };
+  // const handleLoginClick = () => {
+  //   setIsLoggedIn(!isLoggedIn);
+  // };
 
   return (
     <div className="app">
