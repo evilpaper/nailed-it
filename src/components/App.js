@@ -3,7 +3,7 @@ import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
 import nailedItLogo from "./../images/nailed-it-logo.png";
-import { FiLayers } from "react-icons/fi";
+// import { FiLayers } from "react-icons/fi";
 
 import START_DECKS from "./START_DECKS";
 
@@ -30,19 +30,19 @@ export default function App() {
       this.nailed = false;
     }
   }
-  class Deck {
-    constructor() {
-      this.id = nanoid();
-      this.name = "A Tricky Deck · Click to edit title";
-      this.cards = [new Card()];
-    }
-  }
+  // class Deck {
+  //   constructor() {
+  //     this.id = nanoid();
+  //     this.name = "A Tricky Deck · Click to edit title";
+  //     this.cards = [new Card()];
+  //   }
+  // }
 
-  const addDeck = () => {
-    const newDeck = new Deck();
-    const newDecks = [newDeck, ...decks];
-    setDecks(newDecks);
-  };
+  // const addDeck = () => {
+  //   const newDeck = new Deck();
+  //   const newDecks = [newDeck, ...decks];
+  //   setDecks(newDecks);
+  // };
 
   const handleDeckDelete = (deckID) => {
     const newDecks = [...decks].filter((d) => d.id !== deckID);
@@ -116,10 +116,10 @@ export default function App() {
               height="56px"
             ></img>
           </div>
-          <button className="add-deck" onClick={addDeck}>
+          {/* <button className="add-deck" onClick={addDeck}>
             <FiLayers className="add-deck__icon" />
             New deck
-          </button>
+          </button> */}
         </div>
         {/* {!isLoggedIn && (
           <button className="button-login" onClick={handleLoginClick}>
@@ -144,11 +144,11 @@ export default function App() {
         />
       </div>
       <div className="footer">
-        <p>
+        {/* <p>
           <strong>Nailed It</strong> is created by{" "}
           <a href="https://evilpaper.com/">Pelle Lundgren</a>
         </p>
-        <a href="https://github.com/evilpaper/nailed-it">View on github</a>
+        <a href="https://github.com/evilpaper/nailed-it">View on github</a> */}
       </div>
     </div>
   );
