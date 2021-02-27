@@ -21,6 +21,11 @@ body {
   margin-bottom: 1em;
 }
 
+.logo {
+  width: 5em;
+  margin-left: 4em;
+}
+
 .header__left-part {
   display: flex;
   justify-content: center;

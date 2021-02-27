@@ -55,6 +55,7 @@ export default function Deck({
 
   return (
     <div className="deck">
+      <div className="deck-header">
       <input
         type="text"
         name="deck-name"
@@ -87,6 +88,7 @@ export default function Deck({
         >
           <FiTrash2 className="deck__button-icon" />
         </button>
+      </div>
       </div>
       <div className="deck__card-list">
         {transitions.map(({ item, props: { x, ...rest }, key }, index) => (

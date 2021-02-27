@@ -3,7 +3,7 @@ import nanoid from "nanoid";
 const START_DECKS = [
   {
     id: nanoid(),
-    name: "CSS",
+    name: "JS · MDN definitions",
     cards: [
       {
         id: nanoid(),
