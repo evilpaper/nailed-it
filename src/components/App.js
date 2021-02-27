@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Decks from "./Decks";
 import "./app.css";
 import nanoid from "nanoid";
@@ -7,20 +7,20 @@ import nailedItLogo from "./../images/nailed-it-logo.png";
 
 import START_DECKS from "./START_DECKS";
 
-const LOCAL_STORAGE_KEY = "nailed-it.decks";
+// const LOCAL_STORAGE_KEY = "nailed-it.decks";
 
 export default function App() {
   const [decks, setDecks] = useState(START_DECKS);
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  useEffect(() => {
-    const decksJSON = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (decksJSON != null) setDecks(JSON.parse(decksJSON));
-  }, []);
+  // useEffect(() => {
+  //   const decksJSON = localStorage.getItem(LOCAL_STORAGE_KEY);
+  //   if (decksJSON != null) setDecks(JSON.parse(decksJSON));
+  // }, []);
 
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(decks));
-  }, [decks]);
+  // useEffect(() => {
+  //   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(decks));
+  // }, [decks]);
 
   class Card {
     constructor() {

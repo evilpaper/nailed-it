@@ -3,17 +3,12 @@
 @import "./Card/styles.css";
 
 body {
-  display: flex;
-  justify-content: center;
   background-color: #0d0c0c;
   font-family: Helvetica, sans-serif;
 }
 
 .app {
-  width: 98vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -30,11 +25,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.main {
-  width: 100%;
-  margin-left: 10em;
 }
 
 .footer {
@@ -112,16 +102,4 @@ a {
   border: 1px solid #f46c37;
   background-color: white;
   color: #f46c37;
-}
-
-@media (max-width: 599px) {
-  .app {
-    width: 100vw;
-  }
-  .main {
-    margin: 0;
-    padding-left: 1em;
-  }
-  .add-deck {
-  }
 }
