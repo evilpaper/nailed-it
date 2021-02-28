@@ -17,13 +17,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
-  margin-bottom: 1em;
+  margin-top: 2rem;
 }
 
 .logo {
-  width: 5em;
-  margin-left: 4em;
+  width: 4em;
+  margin-left: 2rem;
 }
 
 .header__left-part {

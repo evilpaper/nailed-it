@@ -7,13 +7,7 @@
 .deck-header {
   display: flex;
   flex-direction: column;
-  margin-left: 4em;
-}
-
-.deck__name,
-.deck__stats,
-.deck__actions-menu {
-  padding-left: 12px;
+  margin-left: 2rem;
 }
 
 .deck__name {
@@ -63,7 +57,7 @@
   -webkit-overflow-scrolling: touch;
   height: 20em;
   padding: 12px;
-  padding-left: 4.2em;
+  padding-left: 2rem;
 }
 
 .deck__add-card,
