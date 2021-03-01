@@ -58,6 +58,11 @@
   height: 20em;
   padding: 12px;
   padding-left: 2rem;
+  scroll-snap-type: x mandatory;
+}
+
+.card-container {
+  scroll-snap-align: center;
 }
 
 .deck__add-card,
