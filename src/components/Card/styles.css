@@ -74,6 +74,7 @@
 .card__footer {
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
   width: 100%;
 }
 
@@ -97,4 +98,10 @@
 
 .card__button--front-flip {
   color: rgba(0, 0, 0, 0.9);
+  font-size: 1em;
+  border-radius: 2em;
+  padding: 0.4em 2em;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
 }

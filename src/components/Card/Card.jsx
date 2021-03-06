@@ -107,7 +107,7 @@ export default function Card({
             className="card__button card__button--front-flip"
             onClick={handleFlipClick}
           >
-            <FiChevronRight />
+            Flip
           </button>
         </footer>
       </a.div>
