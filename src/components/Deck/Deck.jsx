@@ -10,7 +10,7 @@ export default function Deck({
   name,
   id,
   addCardToDeck,
-  removeCardFromDeck,
+  // removeCardFromDeck,
   shuffleDeck,
   handleCardContentChange,
   handleDeckNameChange,
@@ -26,9 +26,9 @@ export default function Deck({
     handleCardContentChange(changes, card, id);
   };
 
-  const handleDeleteCard = (card) => {
-    removeCardFromDeck(card, id);
-  };
+  // const handleDeleteCard = (card) => {
+  //   removeCardFromDeck(card, id);
+  // };
 
   const handleEditDeckName = (name) => {
     handleDeckNameChange(name, id);
@@ -103,7 +103,7 @@ export default function Deck({
             <Card
               {...item}
               handleEditCard={handleEditCard}
-              handleDeleteCard={handleDeleteCard}
+              // handleDeleteCard={handleDeleteCard}
             ></Card>
           </a.div>
         ))}

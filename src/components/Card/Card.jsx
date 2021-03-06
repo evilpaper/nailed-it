@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
-import { FiTrash2 } from "react-icons/fi";
+// import { FiTrash2 } from "react-icons/fi";
 import { FiCheck } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
@@ -11,7 +11,7 @@ export default function Card({
   id,
   nailed,
   handleEditCard,
-  handleDeleteCard,
+  // handleDeleteCard,
 }) {
   const [flipped, flip] = useState(true);
 
@@ -25,9 +25,9 @@ export default function Card({
     flip((flipped) => !flipped);
   };
 
-  const handleDeleteClick = () => {
-    handleDeleteCard(id);
-  };
+  // const handleDeleteClick = () => {
+  //   handleDeleteCard(id);
+  // };
 
   const handleChange = (changes) => {
     handleEditCard(changes, id);
@@ -97,12 +97,12 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <footer className="card__footer">
-          <button
+          {/* <button
             className="card__button card__button--delete"
             onClick={handleDeleteClick}
           >
             <FiTrash2 />
-          </button>
+          </button> */}
           <button
             className="card__button card__button--front-flip"
             onClick={handleFlipClick}

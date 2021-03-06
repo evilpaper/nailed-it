@@ -57,14 +57,14 @@ export default function App() {
     setDecks(newDecks);
   };
 
-  const removeCardFromDeck = (cardID, deckID) => {
-    const newDecks = [...decks];
-    const index = newDecks.findIndex((d) => d.id === deckID);
-    newDecks[index].cards = newDecks[index].cards.filter(
-      (c) => c.id !== cardID
-    );
-    setDecks(newDecks);
-  };
+  // const removeCardFromDeck = (cardID, deckID) => {
+  //   const newDecks = [...decks];
+  //   const index = newDecks.findIndex((d) => d.id === deckID);
+  //   newDecks[index].cards = newDecks[index].cards.filter(
+  //     (c) => c.id !== cardID
+  //   );
+  //   setDecks(newDecks);
+  // };
 
   const shuffleDeck = (deckID) => {
     const newDecks = [...decks];
@@ -137,7 +137,7 @@ export default function App() {
         <Decks
           decks={decks}
           addCardToDeck={addCardToDeck}
-          removeCardFromDeck={removeCardFromDeck}
+          // removeCardFromDeck={removeCardFromDeck}
           shuffleDeck={shuffleDeck}
           handleCardContentChange={handleCardContentChange}
           handleDeckNameChange={handleDeckNameChange}

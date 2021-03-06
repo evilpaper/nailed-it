@@ -4,7 +4,7 @@ import Deck from "../Deck";
 export default function Decks({
   decks,
   addCardToDeck,
-  removeCardFromDeck,
+  // removeCardFromDeck,
   shuffleDeck,
   handleCardContentChange,
   handleDeckNameChange,
@@ -16,7 +16,7 @@ export default function Decks({
         key={deck.id}
         {...deck}
         addCardToDeck={addCardToDeck}
-        removeCardFromDeck={removeCardFromDeck}
+        // removeCardFromDeck={removeCardFromDeck}
         shuffleDeck={shuffleDeck}
         handleCardContentChange={handleCardContentChange}
         handleDeckNameChange={handleDeckNameChange}
