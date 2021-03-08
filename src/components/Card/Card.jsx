@@ -3,7 +3,7 @@ import { useSpring, animated as a } from "react-spring";
 // import { FiTrash2 } from "react-icons/fi";
 import { FiCheck } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
-// import { FiChevronRight } from "react-icons/fi";
+import { FiArrowRightCircle } from "react-icons/fi";
 
 export default function Card({
   question,
@@ -60,7 +60,12 @@ export default function Card({
               handleFlipClick();
             }}
           >
-            <FiCheck />
+            <FiCheck 
+             stroke="black"
+             strokeWidth="4"
+             strokeLinecap="round"
+             strokeLinejoin="round"
+            />
           </button>
           <button
             className="card__button card__button--back"
@@ -69,7 +74,12 @@ export default function Card({
               handleFlipClick();
             }}
           >
-            <FiX />
+            <FiX 
+             stroke="black"
+             strokeWidth="4"
+             strokeLinecap="round"
+             strokeLinejoin="round"
+            />
           </button>
           {/* <button
             className="card__button card__button--flip card__button--back"
@@ -107,7 +117,7 @@ export default function Card({
             className="card__button card__button--front-flip"
             onClick={handleFlipClick}
           >
-          Answer
+            <FiArrowRightCircle/>
           </button>
         </footer>
       </a.div>

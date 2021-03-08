@@ -56,39 +56,39 @@ export default function Deck({
   return (
     <div className="deck">
       <div className="deck-header">
-      <input
-        type="text"
-        name="deck-name"
-        className="deck__name"
-        defaultValue={name}
-        onChange={(e) => handleEditDeckName(e.target.value)}
-        maxLength="30"
-      />
-      <p className="deck__stats">
-        <strong>{`${percentageNailed()}% `}</strong>
-        {``}
-        <span className="deck__stats--number-of-cards">{` · ${cards.length} q's`}</span>
-      </p>
-      <div className="deck__actions-menu">
-        {/* <button
-          className="deck__action-button deck__add-card"
-          onClick={onClickAddCard}
-        >
-          <FiPlus className="deck__button-icon" />
-        </button> */}
-        <button
-          className="deck__action-button deck__shuffle-cards"
-          onClick={onClickShuffleDeck}
-        >
-          <FiShuffle className="deck__button-icon" />
-        </button>
-        {/* <button
-          className="deck__action-button deck__delete-deck"
-          onClick={onDeckDeleteClick}
-        >
-          <FiTrash2 className="deck__button-icon" />
-        </button> */}
-      </div>
+        <input
+          type="text"
+          name="deck-name"
+          className="deck__name"
+          defaultValue={name}
+          onChange={(e) => handleEditDeckName(e.target.value)}
+          maxLength="30"
+        />
+        <p className="deck__stats">
+          <button
+            className="shuffle"
+            onClick={onClickShuffleDeck}
+          >
+            <FiShuffle className="deck__button-icon" />
+          </button>
+          <strong>{`${percentageNailed()}% `}</strong>
+          {``}
+          <span className="deck__stats--number-of-cards">{` · ${cards.length} q's`}</span>
+        </p>
+        <div className="deck__actions-menu">
+          {/* <button
+            className="deck__action-button deck__add-card"
+            onClick={onClickAddCard}
+          >
+            <FiPlus className="deck__button-icon" />
+          </button> */}
+          {/* <button
+            className="deck__action-button deck__delete-deck"
+            onClick={onDeckDeleteClick}
+          >
+            <FiTrash2 className="deck__button-icon" />
+          </button> */}
+        </div>
       </div>
       <div className="deck__card-list">
         {transitions.map(({ item, props: { x, ...rest }, key }, index) => (
