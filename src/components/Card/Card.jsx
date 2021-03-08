@@ -62,7 +62,7 @@ export default function Card({
           >
             <FiCheck 
              stroke="black"
-             strokeWidth="4"
+             strokeWidth="2"
              strokeLinecap="round"
              strokeLinejoin="round"
             />
@@ -76,7 +76,7 @@ export default function Card({
           >
             <FiX 
              stroke="black"
-             strokeWidth="4"
+             strokeWidth="2"
              strokeLinecap="round"
              strokeLinejoin="round"
             />
