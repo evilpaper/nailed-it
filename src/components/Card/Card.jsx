@@ -3,7 +3,7 @@ import { useSpring, animated as a } from "react-spring";
 // import { FiTrash2 } from "react-icons/fi";
 import { FiCheck } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
+// import { FiChevronRight } from "react-icons/fi";
 
 export default function Card({
   question,
@@ -52,7 +52,7 @@ export default function Card({
           onChange={(e) => handleChange({ answer: e.target.value })}
           maxLength="75"
         ></textarea>
-        <footer className="card__footer">
+        <footer className="card__footer card__footer--back">
           <button
             className="card__button card__button--back"
             onClick={(e) => {
@@ -71,12 +71,12 @@ export default function Card({
           >
             <FiX />
           </button>
-          <button
+          {/* <button
             className="card__button card__button--flip card__button--back"
             onClick={handleFlipClick}
           >
             <FiChevronRight />
-          </button>
+          </button> */}
         </footer>
       </a.div>
       <a.div
@@ -107,7 +107,7 @@ export default function Card({
             className="card__button card__button--front-flip"
             onClick={handleFlipClick}
           >
-            Flip
+          Answer
           </button>
         </footer>
       </a.div>

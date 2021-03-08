@@ -40,10 +40,10 @@
   margin: 0;
   background: transparent;
   color: #0d0c0c;
-  font-size: 2em;
+  font-size: 1.4em;
   line-height: 1.1em;
   padding-top: 0.2em;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.8px;
   -webkit-appearance: textfield;
 }
@@ -78,6 +78,11 @@
   width: 100%;
 }
 
+.card__footer--back {
+  display: center;
+  justify-content: space-around;
+}
+
 .card__button {
   display: flex;
   justify-content: center;
@@ -90,6 +95,12 @@
 
 .card__button--back {
   color: rgba(0, 0, 0, 0.9);
+  font-size: 1em;
+  border-radius: 2em;
+  padding: 1em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
 }
 
 .card__button--delete {
@@ -100,7 +111,7 @@
   color: rgba(0, 0, 0, 0.9);
   font-size: 1em;
   border-radius: 2em;
-  padding: 0.4em 2em;
+  padding: 0.2em 1.4em;
   border: 1px solid rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;

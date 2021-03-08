@@ -2,8 +2,8 @@ import React from "react";
 import Card from "../Card";
 import { animated as a, useTransition } from "react-spring";
 import { FiShuffle } from "react-icons/fi";
-import { FiPlus } from "react-icons/fi";
-import { FiTrash2 } from "react-icons/fi";
+// import { FiPlus } from "react-icons/fi";
+// import { FiTrash2 } from "react-icons/fi";
 
 export default function Deck({
   cards,
@@ -16,11 +16,11 @@ export default function Deck({
   handleDeckNameChange,
   onDeckDelete,
 }) {
-  const onClickAddCard = () => addCardToDeck(id);
+  // const onClickAddCard = () => addCardToDeck(id);
 
   const onClickShuffleDeck = () => shuffleDeck(id);
 
-  const onDeckDeleteClick = () => onDeckDelete(id);
+  // const onDeckDeleteClick = () => onDeckDelete(id);
 
   const handleEditCard = (changes, card) => {
     handleCardContentChange(changes, card, id);
@@ -67,27 +67,27 @@ export default function Deck({
       <p className="deck__stats">
         <strong>{`${percentageNailed()}% `}</strong>
         {``}
-        <span className="deck__stats--number-of-cards">{` correct answers · ${cards.length} cards`}</span>
+        <span className="deck__stats--number-of-cards">{` · ${cards.length} q's`}</span>
       </p>
       <div className="deck__actions-menu">
-        <button
+        {/* <button
           className="deck__action-button deck__add-card"
           onClick={onClickAddCard}
         >
           <FiPlus className="deck__button-icon" />
-        </button>
+        </button> */}
         <button
           className="deck__action-button deck__shuffle-cards"
           onClick={onClickShuffleDeck}
         >
           <FiShuffle className="deck__button-icon" />
         </button>
-        <button
+        {/* <button
           className="deck__action-button deck__delete-deck"
           onClick={onDeckDeleteClick}
         >
           <FiTrash2 className="deck__button-icon" />
-        </button>
+        </button> */}
       </div>
       </div>
       <div className="deck__card-list">
