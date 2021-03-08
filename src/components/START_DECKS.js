@@ -28,25 +28,25 @@ const START_DECKS = [
         question: "The  _____  object are thrown when runtime errors occur.",
         answer: "Error",
         nailed: false,
-      }
+      },
       {
         id: nanoid(),
         question: "The  _____  object holds key-value pairs and remembers the original insertion order of the keys.  ",
         answer: "Map",
         nailed: false,
-      }
+      },
       {
         id: nanoid(),
         question: "The  _____  object lets you store unique values of any type, whether primitive values or object references.",
         answer: "Set",
         nailed: false,
-      }
+      },
       {
         id: nanoid(),
         question: "The  _____  object contains methods for parsing JavaScript Object Notation (JSON) and converting values to JSON.",
         answer: "JSON",
         nailed: false,
-      }
+      },
       {
         id: nanoid(),
         question: "The  _____  object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.",
