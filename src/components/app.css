@@ -1,6 +1,6 @@
 @import "./../utilities/reset.css";
 @import "./Deck/styles.css";
-@import "./Card/styles.css";
+/* @import "./Card/styles.css"; */
 
 body {
   background-color: #0d0c0c;

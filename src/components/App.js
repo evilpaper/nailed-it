@@ -5,12 +5,12 @@ import nanoid from "nanoid";
 import nailedItLogo from "./../images/nailed-it-logo-public.png";
 // import { FiLayers } from "react-icons/fi";
 
-import START_DECKS from "./START_DECKS";
+import DEFAULT_DECKS from "./DEFAULT_DECKS";
 
 // const LOCAL_STORAGE_KEY = "nailed-it.decks";
 
 export default function App() {
-  const [decks, setDecks] = useState(START_DECKS);
+  const [decks, setDecks] = useState(DEFAULT_DECKS);
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // useEffect(() => {

@@ -1,6 +1,6 @@
 import nanoid from "nanoid";
 
-const START_DECKS = [
+const DEFAULT_DECKS = [
   {
     id: nanoid(),
     name: "JS · MDN definitions",
@@ -57,4 +57,4 @@ const START_DECKS = [
   },
 ];
 
-export default START_DECKS;
+export default DEFAULT_DECKS;

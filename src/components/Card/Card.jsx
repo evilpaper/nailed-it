@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
-// import { FiTrash2 } from "react-icons/fi";
 import { FiCheck } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
 import { FiArrowRightCircle } from "react-icons/fi";
+import "./styles.css";
 
 export default function Card({
   question,
@@ -34,7 +34,7 @@ export default function Card({
   };
 
   return (
-    <div className="card-container">
+    <div className="container">
       <a.div
         className="card back"
         style={{
@@ -43,9 +43,9 @@ export default function Card({
         }}
       >
         {" "}
-        <p className="card__header card__header--back">Answer</p>
+        <p className="heading">Answer</p>
         <textarea
-          className="card__content card__content--back"
+          className="content"
           id="answer"
           name="answer"
           defaultValue={answer}
@@ -97,9 +97,9 @@ export default function Card({
         }}
       >
         {" "}
-        <p className="card__header">Question</p>
+        <p className="heading">Question</p>
         <textarea
-          className="card__content"
+          className="content"
           id="question"
           name="question"
           defaultValue={question}
