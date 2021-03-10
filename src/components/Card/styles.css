@@ -63,19 +63,21 @@
   outline: 0;
 }
 
-.card__footer {
+.bottom-front {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   width: 100%;
 }
 
-.card__footer--back {
-  display: center;
+.bottom-back {
+  display: flex;
   justify-content: space-around;
+  flex-direction: row-reverse;
+  width: 100%;
 }
 
-.card__button {
+.card-button {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -52,9 +52,9 @@ export default function Card({
           onChange={(e) => handleChange({ answer: e.target.value })}
           maxLength="75"
         ></textarea>
-        <footer className="card__footer card__footer--back">
+        <footer className="bottom-back">
           <button
-            className="card__button card__button--back"
+            className="card-button"
             onClick={(e) => {
               handleChange({ nailed: true });
               handleFlipClick();
@@ -68,7 +68,7 @@ export default function Card({
             />
           </button>
           <button
-            className="card__button card__button--back"
+            className="card-button"
             onClick={(e) => {
               handleChange({ nailed: false });
               handleFlipClick();
@@ -106,7 +106,7 @@ export default function Card({
           onChange={(e) => handleChange({ question: e.target.value })}
           maxLength="75"
         ></textarea>
-        <footer className="card__footer">
+        <footer className="bottom-front">
           {/* <button
             className="card__button card__button--delete"
             onClick={handleDeleteClick}
@@ -114,7 +114,7 @@ export default function Card({
             <FiTrash2 />
           </button> */}
           <button
-            className="card__button card__button--front-flip"
+            className="card-button"
             onClick={handleFlipClick}
           >
             <FiArrowRightCircle/>
