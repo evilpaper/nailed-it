@@ -66,12 +66,21 @@
 }
 
 .shuffle {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.8em;
-  padding: 0.4em;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9em;
+  padding: 0;
   border: none;
   vertical-align: middle;
   margin-right: 1em;
+}
+
+.reset {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9em;
+  padding: 0;
+  border: none;
+  vertical-align: middle;
+  margin-left: 1em;
 }
 
 .deck__add-card,
