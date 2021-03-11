@@ -56,13 +56,15 @@
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   height: 20em;
+  width: 100%;
   padding: 12px;
   padding-left: 2rem;
   scroll-snap-type: x mandatory;
+  scroll-padding-left: 2rem;
 }
 
 .card-container {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 
 .shuffle {
