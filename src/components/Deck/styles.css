@@ -76,6 +76,13 @@
   margin-right: 1em;
   display: flex;
   align-items: center;
+  width: 5em;
+  justify-content: space-between;
+}
+
+.shuffle svg {
+  height: 1em;
+  width: 1em;
 }
 
 .reset {

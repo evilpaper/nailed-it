@@ -76,8 +76,8 @@ export default function Deck({
               className="shuffle"
               onClick={onClickShuffleDeck}
           >
-            <ShuffleIcon />
-            Shuffle
+            <ShuffleIcon /> 
+            <span>Shuffle</span>
           </button>
           <button
               className="reset"
