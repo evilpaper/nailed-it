@@ -38,7 +38,9 @@ export default function Card({
         }}
       >
         {" "}
-        <p className="heading">Answer</p>
+        <div className="heading">
+          <p className="heading-label">Answer</p>
+        </div>
         <textarea
           className="content"
           id="answer"
@@ -76,7 +78,9 @@ export default function Card({
         }}
       >
         {" "}
-        <p className="heading">Question</p>
+        <div className="heading">
+          <p className="heading-label">QUESTION</p>
+        </div>
         <textarea
           className="content"
           id="question"

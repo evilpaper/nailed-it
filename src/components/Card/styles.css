@@ -49,9 +49,17 @@
 }
 
 .heading {
-  color: rgba(0, 0, 0, 0.9);
-  width: 100%;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.6em;
+}
+
+.heading-label {
+  font-size: 0.8em;
+  color: tomato;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .back {
@@ -72,7 +80,7 @@
 
 .bottom-back {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row-reverse;
   width: 100%;
 }
