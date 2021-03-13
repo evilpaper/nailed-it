@@ -52,13 +52,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.6em;
 }
 
 .heading-label {
   font-size: 0.8em;
-  color: tomato;
-  font-weight: 700;
+  color: hsla(0, 0%, 0%, 0.8);
+  font-weight: 500;
   letter-spacing: 1px;
 }
 
@@ -80,7 +79,7 @@
 
 .bottom-back {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row-reverse;
   width: 100%;
 }
@@ -93,4 +92,9 @@
   font-size: 2em;
   padding: 0.4em;
   border: none;
+}
+
+.answer {
+  width: 1.6em;
+  height: 1.6em;
 }

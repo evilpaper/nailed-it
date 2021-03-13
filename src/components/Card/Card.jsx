@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { ReactComponent as FlipIcon } from "../../images/flip.svg";
-import { ReactComponent as YesIcon } from "../../images/yes.svg";
-import { ReactComponent as NoIcon } from "../../images/no.svg";
+import { ReactComponent as YesIcon } from "../../images/yes-green.svg";
+import { ReactComponent as NoIcon } from "../../images/no-red.svg";
 import "./styles.css";
 
 export default function Card({
@@ -39,7 +39,7 @@ export default function Card({
       >
         {" "}
         <div className="heading">
-          <p className="heading-label">Answer</p>
+          <p className="heading-label">ANSWER</p>
         </div>
         <textarea
           className="content"
@@ -57,7 +57,7 @@ export default function Card({
               handleFlipClick();
             }}
           >
-            <YesIcon/>
+            <YesIcon className="answer"/>
           </button>
           <button
             className="card-button"
@@ -66,7 +66,7 @@ export default function Card({
               handleFlipClick();
             }}
           >
-            <NoIcon /> 
+            <NoIcon className="answer"/> 
           </button>
         </footer>
       </a.div>
