@@ -34,19 +34,14 @@
   outline: none;
 }
 
-.deck__stats {
-  margin-bottom: 1em;
+.progress {
+  margin-bottom: 0.4em;
   color: #faecef;
   font-size: 1em;
 }
 
-.deck__stats--number-of-cards {
+.size {
   color: rgba(255, 255, 255, 0.4);
-}
-
-.deck__actions-menu {
-  display: flex;
-  margin-bottom: 0.4em;
 }
 
 .deck__card-list {
@@ -67,8 +62,13 @@
   scroll-snap-align: start;
 }
 
+.controls {
+  display: flex;
+  margin-bottom: 1em;
+}
+
 .shuffle {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.9em;
   padding: 0;
   border: none;
@@ -76,22 +76,30 @@
   margin-right: 1em;
   display: flex;
   align-items: center;
-  width: 5em;
   justify-content: space-between;
 }
 
 .shuffle svg {
   height: 1em;
   width: 1em;
+  margin-right: 0.4em;
 }
 
 .reset {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.9em;
   padding: 0;
   border: none;
   vertical-align: middle;
-  margin-left: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reset svg {
+  height: 1em;
+  width: 1em;
+  margin-right: 0.4em;
 }
 
 .deck__add-card,

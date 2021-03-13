@@ -1,5 +1,8 @@
 @import "./../utilities/reset.css";
-/* @import "./Deck/styles.css"; */
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
 
 body {
   background-color: #0d0c0c;
