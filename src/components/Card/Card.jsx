@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
-import { FiCheck } from "react-icons/fi";
-import { FiX } from "react-icons/fi";
-import { FiArrowRightCircle } from "react-icons/fi";
+import { ReactComponent as FlipIcon } from "../../images/flip.svg";
+import { ReactComponent as YesIcon } from "../../images/yes.svg";
+import { ReactComponent as NoIcon } from "../../images/no.svg";
 import "./styles.css";
 
 export default function Card({
@@ -11,7 +11,6 @@ export default function Card({
   id,
   nailed,
   handleEditCard,
-  // handleDeleteCard,
 }) {
   const [flipped, flip] = useState(true);
 
@@ -24,10 +23,6 @@ export default function Card({
   const handleFlipClick = () => {
     flip((flipped) => !flipped);
   };
-
-  // const handleDeleteClick = () => {
-  //   handleDeleteCard(id);
-  // };
 
   const handleChange = (changes) => {
     handleEditCard(changes, id);
@@ -60,12 +55,7 @@ export default function Card({
               handleFlipClick();
             }}
           >
-            <FiCheck 
-             stroke="black"
-             strokeWidth="2"
-             strokeLinecap="round"
-             strokeLinejoin="round"
-            />
+            <YesIcon/>
           </button>
           <button
             className="card-button"
@@ -74,19 +64,8 @@ export default function Card({
               handleFlipClick();
             }}
           >
-            <FiX 
-             stroke="black"
-             strokeWidth="2"
-             strokeLinecap="round"
-             strokeLinejoin="round"
-            />
+            <NoIcon /> 
           </button>
-          {/* <button
-            className="card__button card__button--flip card__button--back"
-            onClick={handleFlipClick}
-          >
-            <FiChevronRight />
-          </button> */}
         </footer>
       </a.div>
       <a.div
@@ -107,17 +86,11 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <footer className="bottom-front">
-          {/* <button
-            className="card__button card__button--delete"
-            onClick={handleDeleteClick}
-          >
-            <FiTrash2 />
-          </button> */}
           <button
             className="card-button"
             onClick={handleFlipClick}
           >
-            <FiArrowRightCircle/>
+            <FlipIcon/>
           </button>
         </footer>
       </a.div>
