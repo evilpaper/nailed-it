@@ -2,6 +2,8 @@ import React from "react";
 import Card from "../Card";
 import { animated as a, useTransition } from "react-spring";
 import "./styles.css";
+// import ShuffleIcon from "../../images/shuffle.svg"
+import { ReactComponent as ShuffleIcon } from "../../images/shuffle.svg";
 // import { FiPlus } from "react-icons/fi";
 // import { FiTrash2 } from "react-icons/fi";
 
@@ -65,22 +67,26 @@ export default function Deck({
           maxLength="30"
         />
         <div className="deck__stats">
-          <button
-            className="shuffle"
-            onClick={onClickShuffleDeck}
-          >
-            Shuffle
-          </button>
           <strong>{`${percentageNailed()}% `}</strong>
           {``}
-          <span className="deck__stats--number-of-cards">{` · ${cards.length} q's`}</span>
+          <span className="deck__stats--number-of-cards">{` · ${cards.length} questions`}</span>
+        </div>
+        <div>
           <button
-            className="reset"
-            onClick={onClickShuffleDeck}
+              className="shuffle"
+              onClick={onClickShuffleDeck}
           >
-            Reset
+            <ShuffleIcon />
+            Shuffle
+          </button>
+          <button
+              className="reset"
+              onClick={onClickShuffleDeck}
+          >
+              Reset
           </button>
         </div>
+ 
         {/* <div className="deck__actions-menu">
           <button
             className="deck__action-button deck__add-card"

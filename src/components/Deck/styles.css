@@ -74,6 +74,8 @@
   border: none;
   vertical-align: middle;
   margin-right: 1em;
+  display: flex;
+  align-items: center;
 }
 
 .reset {
