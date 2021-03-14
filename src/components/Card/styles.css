@@ -92,9 +92,13 @@
   font-size: 2em;
   padding: 0.4em;
   border: none;
+  
 }
 
 .answer {
-  width: 1.4em;
-  height: 1.4em;
+  width: 1.6em;
+  height: 1.6em;
+  padding: 0.2em;
+  border: 1px solid slategrey;
+  border-radius: 50%;
 }
