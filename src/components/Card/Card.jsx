@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { ReactComponent as FlipIcon } from "../../images/flip.svg";
-import { ReactComponent as YesIcon } from "../../images/yes-green.svg";
-import { ReactComponent as NoIcon } from "../../images/no-red.svg";
+import { ReactComponent as YesIcon } from "../../images/yes.svg";
+import { ReactComponent as NoIcon } from "../../images/no.svg";
 import "./styles.css";
 
 export default function Card({
