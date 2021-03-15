@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { ReactComponent as FlipIcon } from "../../images/flip.svg";
-import { ReactComponent as YesIcon } from "../../images/yes-plain.svg";
-import { ReactComponent as NoIcon } from "../../images/no-plain.svg";
+import { ReactComponent as YesIcon } from "../../images/yes.svg";
+import { ReactComponent as NoIcon } from "../../images/no.svg";
 import "./styles.css";
 
-export default function Card({
-  question,
-  answer,
-  id,
-  nailed,
-  handleEditCard,
-}) {
+export default function Card({ question, answer, id, nailed, handleEditCard }) {
   const [flipped, flip] = useState(true);
 
   const { transform, opacity } = useSpring({
@@ -39,7 +33,7 @@ export default function Card({
       >
         {" "}
         <div className="heading">
-          <p className="heading-label">ANSWER</p>
+          <p className="heading-label">TERM</p>
         </div>
         <textarea
           className="content"
@@ -57,7 +51,7 @@ export default function Card({
               handleFlipClick();
             }}
           >
-            <YesIcon className="answer"/>
+            <YesIcon className="answer" />
           </button>
           <button
             className="card-button"
@@ -66,7 +60,7 @@ export default function Card({
               handleFlipClick();
             }}
           >
-            <NoIcon className="answer"/> 
+            <NoIcon className="answer" />
           </button>
         </footer>
       </a.div>
@@ -79,7 +73,7 @@ export default function Card({
       >
         {" "}
         <div className="heading">
-          <p className="heading-label">QUESTION</p>
+          <p className="heading-label">DEFINITION</p>
         </div>
         <textarea
           className="content"
@@ -90,11 +84,8 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <footer className="bottom-front">
-          <button
-            className="card-button"
-            onClick={handleFlipClick}
-          >
-            <FlipIcon/>
+          <button className="card-button" onClick={handleFlipClick}>
+            <FlipIcon />
           </button>
         </footer>
       </a.div>

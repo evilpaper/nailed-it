@@ -19,8 +19,8 @@
   padding-top: 4em;
   backface-visibility: hidden;
   box-shadow: 0px 6px 10px 0 hsla(0, 0%, 0%, 0.4);
-  color: #0d0c0c;
-  background-color: white;
+  color: var(--color-darkest-night);
+  background-color: var(--color-brightest-day);
   flex-direction: column;
   padding: 1.8em;
   font-size: 0.9em;
@@ -39,7 +39,7 @@
   padding: 0;
   margin: 0;
   background: transparent;
-  color: #0d0c0c;
+  color: var(--color-darkest-night);
   font-size: 1.4em;
   line-height: 1.2em;
   padding-top: 0.2em;
@@ -56,14 +56,14 @@
 
 .heading-label {
   font-size: 0.8em;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: var(--color-darkest-night);
   font-weight: 500;
   letter-spacing: 1px;
 }
 
 .back {
-  background-color: white;
-  color: black;
+  background-color: var(--color-brightest-day);
+  color: var(--color-darkest-night);
 }
 
 .content:focus {
@@ -88,17 +88,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--color-darkest-night);
   font-size: 2em;
   padding: 0.4em;
   border: none;
-  
 }
 
 .answer {
   width: 1.6em;
   height: 1.6em;
-  padding: 0.2em;
-  border: 1px solid slategrey;
+  border: 3px solid var(--color-darkest-night);
+  background-color: var(--color-darkest-night);
   border-radius: 50%;
+  color: var(--color-brightest-day);
 }
