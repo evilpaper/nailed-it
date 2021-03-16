@@ -37,11 +37,12 @@
 .progress {
   margin-bottom: 0.4em;
   color: #faecef;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .size {
   color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9em;
 }
 
 .deck__card-list {

@@ -57,10 +57,10 @@ export default function Deck({
   };
 
   const handleResetClick = () => {
-    cards.forEach(card => {
+    cards.forEach((card) => {
       // handleCardContentChange({ nailed: false }, card)
-    })
-  }
+    });
+  };
 
   return (
     <div className="deck">
@@ -74,23 +74,17 @@ export default function Deck({
           maxLength="30"
         />
         <div className="progress">
+          <span className="size">{`${cards.length} questions · `}</span>
+          {` `}
           <strong>{`${percentageNailed()}% `}</strong>
-          {``}
-          <span className="size">{` · ${cards.length} questions`}</span>
         </div>
         <div className="controls">
-          <button
-              className="shuffle"
-              onClick={onClickShuffleDeck}
-          >
-            <ShuffleIcon /> 
+          <button className="shuffle" onClick={onClickShuffleDeck}>
+            <ShuffleIcon />
             <span>Shuffle</span>
           </button>
-          <button
-              className="reset"
-              onClick={handleResetClick}
-          >
-            <ResetIcon/>
+          <button className="reset" onClick={handleResetClick}>
+            <ResetIcon />
             <span>Reset</span>
           </button>
         </div>
@@ -105,10 +99,7 @@ export default function Deck({
               ...rest,
             }}
           >
-            <Card
-              {...item}
-              handleEditCard={handleEditCard}
-            ></Card>
+            <Card {...item} handleEditCard={handleEditCard}></Card>
           </a.div>
         ))}
       </div>
