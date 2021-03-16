@@ -81,7 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-darkest-night);
+  color: var(--color-magic-blue);
   border: none;
 }
 
@@ -91,7 +91,7 @@
 
 .question {
   font-weight: 400;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: hsla(223, 98%, 17%, 0.7);
   margin-bottom: 0.6em;
 }
 
@@ -106,8 +106,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-darkest-night);
+  color: var(--color-magic-blue);
+  color: orangered;
   border: none;
   font-size: 1.4em;
-  font-weight: 700;
+  font-weight: 500;
 }
