@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
-import { ReactComponent as FlipIcon } from "../../images/flip.svg";
-import { ReactComponent as YesIcon } from "../../images/yes.svg";
-import { ReactComponent as NoIcon } from "../../images/no.svg";
 import "./styles.css";
 
 export default function Card({ question, answer, id, nailed, handleEditCard }) {
@@ -43,25 +40,28 @@ export default function Card({ question, answer, id, nailed, handleEditCard }) {
           onChange={(e) => handleChange({ answer: e.target.value })}
           maxLength="75"
         ></textarea>
-        <footer className="bottom-back">
-          <button
-            className="card-button"
-            onClick={(e) => {
-              handleChange({ nailed: true });
-              handleFlipClick();
-            }}
-          >
-            <YesIcon className="answer" />
-          </button>
-          <button
-            className="card-button"
-            onClick={(e) => {
-              handleChange({ nailed: false });
-              handleFlipClick();
-            }}
-          >
-            <NoIcon className="answer" />
-          </button>
+        <footer className="footer-back">
+          <p className="question">Nailed it?</p>
+          <div className="answers">
+            <button
+              className="answer"
+              onClick={(e) => {
+                handleChange({ nailed: true });
+                handleFlipClick();
+              }}
+            >
+              HELL YES{/* <YesIcon className="answer" /> */}
+            </button>
+            <button
+              className="answer"
+              onClick={(e) => {
+                handleChange({ nailed: false });
+                handleFlipClick();
+              }}
+            >
+              F**K NO{/* <NoIcon className="answer" /> */}
+            </button>
+          </div>
         </footer>
       </a.div>
       <a.div
@@ -84,8 +84,8 @@ export default function Card({ question, answer, id, nailed, handleEditCard }) {
           maxLength="75"
         ></textarea>
         <footer className="bottom-front">
-          <button className="card-button" onClick={handleFlipClick}>
-            <FlipIcon />
+          <button className="flip" onClick={handleFlipClick}>
+            Flip
           </button>
         </footer>
       </a.div>

@@ -77,28 +77,37 @@
   width: 100%;
 }
 
-.bottom-back {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row-reverse;
-  width: 100%;
-}
-
-.card-button {
+.flip {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--color-darkest-night);
-  font-size: 2em;
-  padding: 0.4em;
   border: none;
 }
 
+.footer-back {
+  width: 100%;
+}
+
+.question {
+  font-weight: 400;
+  color: hsla(0, 0%, 0%, 0.8);
+  margin-bottom: 0.6em;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
+
 .answer {
-  width: 1.6em;
-  height: 1.6em;
-  border: 3px solid var(--color-darkest-night);
-  background-color: var(--color-darkest-night);
-  border-radius: 50%;
-  color: var(--color-brightest-day);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-darkest-night);
+  border: none;
+  font-size: 1.4em;
+  font-weight: 700;
 }
