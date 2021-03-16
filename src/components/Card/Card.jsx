@@ -50,7 +50,7 @@ export default function Card({ question, answer, id, nailed, handleEditCard }) {
                 handleFlipClick();
               }}
             >
-              Yes{/* <YesIcon className="answer" /> */}
+              YES{/* <YesIcon className="answer" /> */}
             </button>
             <button
               className="answer"
@@ -59,7 +59,7 @@ export default function Card({ question, answer, id, nailed, handleEditCard }) {
                 handleFlipClick();
               }}
             >
-              No{/* <NoIcon className="answer" /> */}
+              NO{/* <NoIcon className="answer" /> */}
             </button>
           </div>
         </footer>
