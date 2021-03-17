@@ -74,7 +74,7 @@ export default function Deck({
           maxLength="30"
         />
         <div className="progress">
-          <span className="size">{`${cards.length} questions · `}</span>
+          <span className="size">{`${cards.length} cards · `}</span>
           {` `}
           <strong>{`${percentageNailed()}% `}</strong>
         </div>
