@@ -62,6 +62,8 @@
 .back {
   background-color: var(--color-brightest-day);
   color: var(--color-darkest-night);
+  background-image: url("./../../images/bg/swapnil-deshpandey.jpeg");
+  background-size: cover;
 }
 
 .content:focus {
