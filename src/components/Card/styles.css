@@ -46,6 +46,10 @@
   -webkit-appearance: textfield;
 }
 
+.back .content {
+  color: var(--color-brightest-day);
+}
+
 .heading {
   display: flex;
   justify-content: center;
@@ -60,9 +64,8 @@
 }
 
 .back {
-  background-color: var(--color-brightest-day);
-  color: var(--color-darkest-night);
-  background-image: url("./../../images/bg/swapnil-deshpandey.jpeg");
+  color: var(--color-brightest-day);
+  background-image: url("./../../images/bg/swapnil-deshpandey.jpg");
   background-size: cover;
 }
 
