@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
 import "./styles.css";
 
-export default function Card({ question, answer, id, nailed, handleEditCard }) {
+export default function Card({
+  question,
+  answer,
+  id,
+  nailed,
+  handleEditCard,
+  firstColor,
+  secondColor,
+}) {
   const [flipped, flip] = useState(true);
 
   const { transform, opacity } = useSpring({
@@ -26,6 +34,8 @@ export default function Card({ question, answer, id, nailed, handleEditCard }) {
         style={{
           opacity: opacity.interpolate((o) => 1 - o),
           transform,
+          color: firstColor,
+          backgroundColor: secondColor,
         }}
       >
         {" "}
@@ -69,6 +79,8 @@ export default function Card({ question, answer, id, nailed, handleEditCard }) {
         style={{
           opacity,
           transform: transform.interpolate((t) => `${t} rotateY(-180deg)`),
+          color: firstColor,
+          backgroundColor: secondColor,
         }}
       >
         {" "}

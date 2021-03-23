@@ -7,7 +7,7 @@
 .card {
   will-change: transform, opacity;
   position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  /* border: 1px solid rgba(255, 255, 255, 0.4); */
   border-radius: 6%;
   text-align: center;
   width: 100%;
@@ -19,8 +19,7 @@
   padding-top: 4em;
   backface-visibility: hidden;
   box-shadow: 0px 6px 10px 0 hsla(0, 0%, 0%, 0.4);
-  color: var(--color-darkest-night);
-  background-color: var(--color-brightest-day);
+  /* background-color: #d48d8d; */
   flex-direction: column;
   padding: 1.8em;
   font-size: 0.9em;
@@ -39,15 +38,12 @@
   padding: 0;
   margin: 0;
   background: transparent;
-  color: var(--color-darkest-night);
+  /* color: #000347; */
+  color: inherit;
   font-size: 1.4em;
   line-height: 1.2em;
   padding-top: 0.2em;
   -webkit-appearance: textfield;
-}
-
-.back .content {
-  color: var(--color-brightest-day);
 }
 
 .heading {
@@ -58,15 +54,9 @@
 
 .heading-label {
   font-size: 0.8em;
-  color: var(--color-darkest-night);
+  /* color: var(--color-darkest-night); */
   font-weight: 500;
   letter-spacing: 1px;
-}
-
-.back {
-  color: var(--color-brightest-day);
-  background-image: url("./../../images/bg/swapnil-deshpandey.jpg");
-  background-size: cover;
 }
 
 .content:focus {
@@ -84,7 +74,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-darkest-night);
+  color: inherit;
+  /* color: var(--color-darkest-night); */
   border: none;
 }
 
@@ -94,7 +85,6 @@
 
 .question {
   font-weight: 400;
-  color: hsla(223, 98%, 2%, 0.7);
   margin-bottom: 0.6em;
 }
 
@@ -103,13 +93,13 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row-reverse;
+  color: inherit;
 }
 
 .answer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-darkest-night);
   border: none;
   font-size: 1.4em;
 }
