@@ -18,16 +18,8 @@
   font-size: 1em;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.2em;
-  word-wrap: normal;
-}
-
-.deck-name__divder {
-  margin-left: 12px;
   margin-bottom: 0.4em;
-  color: rgba(255, 255, 255, 0.4);
-  font-weight: 700;
-  font-size: 0.8em;
+  word-wrap: normal;
 }
 
 .deck__name:focus {
@@ -42,7 +34,6 @@
 
 .size {
   color: rgba(255, 255, 255, 0.4);
-  font-size: 0.9em;
 }
 
 .deck__card-list {

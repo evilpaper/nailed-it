@@ -2,15 +2,7 @@ import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
 import "./styles.css";
 
-export default function Card({
-  question,
-  answer,
-  id,
-  nailed,
-  handleEditCard,
-  firstColor,
-  secondColor,
-}) {
+export default function Card({ question, answer, id, nailed, handleEditCard }) {
   const [flipped, flip] = useState(true);
 
   const { transform, opacity } = useSpring({
@@ -34,8 +26,6 @@ export default function Card({
         style={{
           opacity: opacity.interpolate((o) => 1 - o),
           transform,
-          color: firstColor,
-          backgroundColor: secondColor,
         }}
       >
         {" "}
@@ -51,7 +41,6 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <footer className="footer-back">
-          <p className="question">Nailed it?</p>
           <div className="answers">
             <button
               className="answer"
@@ -60,7 +49,7 @@ export default function Card({
                 handleFlipClick();
               }}
             >
-              Yes{/* <YesIcon className="answer" /> */}
+              Hell yes
             </button>
             <button
               className="answer"
@@ -69,7 +58,7 @@ export default function Card({
                 handleFlipClick();
               }}
             >
-              No{/* <NoIcon className="answer" /> */}
+              F**k no
             </button>
           </div>
         </footer>
@@ -79,13 +68,12 @@ export default function Card({
         style={{
           opacity,
           transform: transform.interpolate((t) => `${t} rotateY(-180deg)`),
-          color: firstColor,
-          backgroundColor: secondColor,
         }}
       >
         {" "}
         <div className="heading">
           <p className="heading-label">DEFINITION</p>
+          <p className="number">No 01</p>
         </div>
         <textarea
           className="content"
@@ -97,7 +85,7 @@ export default function Card({
         ></textarea>
         <footer className="bottom-front">
           <button className="flip" onClick={handleFlipClick}>
-            Flip
+            Flip =>
           </button>
         </footer>
       </a.div>

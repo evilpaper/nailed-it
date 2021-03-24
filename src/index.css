@@ -1,5 +1,10 @@
 :root {
   --color-magic-blue: hsl(223, 98%, 17%);
+  --color-dark-night: hsl(223, 98%, 6%);
+  --color-darker-night: hsl(223, 98%, 4%);
   --color-darkest-night: hsl(223, 98%, 2%);
-  --color-brightest-day: hsl(223, 98%, 98%);
+  --color-bright-day: hsl(42, 94%, 98%);
+  --color-brighter-day: hsl(42, 96%, 98%);
+  --color-brightest-day: hsl(42, 98%, 98%);
+  --color-ruby: hsl(360, 70%, 50%);
 }
