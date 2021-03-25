@@ -56,9 +56,12 @@ export default function Deck({
     return result;
   };
 
-  const handleResetClick = () => {
+  const onResetClick = () => {
     cards.forEach((card) => {
-      // handleCardContentChange({ nailed: false }, card)
+      if (card.nailed === true) {
+        console.log(card);
+        handleCardContentChange({ nailed: false }, card.id, id);
+      }
     });
   };
 
@@ -83,7 +86,7 @@ export default function Deck({
             <ShuffleIcon />
             <span>Shuffle</span>
           </button>
-          <button className="reset" onClick={handleResetClick}>
+          <button className="reset" onClick={onResetClick}>
             <ResetIcon />
             <span>Reset</span>
           </button>
