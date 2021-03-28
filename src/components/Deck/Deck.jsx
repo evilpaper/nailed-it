@@ -79,7 +79,7 @@ export default function Deck({
         <div className="progress">
           <span className="size">{`${cards.length} cards · 5 mins · `}</span>
           {` `}
-          <strong>{`${percentageNailed()}% completed`}</strong>
+          <span>{`${percentageNailed()}% completed`}</span>
         </div>
         <div className="controls">
           <button className="shuffle" onClick={onClickShuffleDeck}>

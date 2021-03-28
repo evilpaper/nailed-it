@@ -16,7 +16,7 @@
   cursor: pointer;
   background-color: transparent;
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 500;
   color: white;
   margin-bottom: 0.4em;
   word-wrap: normal;
@@ -30,10 +30,12 @@
   margin-bottom: 0.4em;
   color: #faecef;
   font-size: 0.9em;
+  font-weight: 400;
 }
 
 .size {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
 }
 
 .deck__card-list {
@@ -60,7 +62,7 @@
 }
 
 .shuffle {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 0.9em;
   padding: 0;
   border: none;
@@ -78,7 +80,7 @@
 }
 
 .reset {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 0.9em;
   padding: 0;
   border: none;

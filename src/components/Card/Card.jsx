@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
+import { ReactComponent as Right } from "../../images/right.svg";
 import "./styles.css";
 
-export default function Card({ question, answer, id, nailed, handleEditCard }) {
+export default function Card({
+  question,
+  answer,
+  id,
+  number,
+  nailed,
+  handleEditCard,
+}) {
   const [flipped, flip] = useState(true);
 
   const { transform, opacity } = useSpring({
@@ -73,7 +81,7 @@ export default function Card({ question, answer, id, nailed, handleEditCard }) {
         {" "}
         <div className="heading">
           <p className="heading-label">DEFINITION</p>
-          <p className="number">No 01</p>
+          <p className="number">No {number}</p>
         </div>
         <textarea
           className="content"
@@ -85,7 +93,7 @@ export default function Card({ question, answer, id, nailed, handleEditCard }) {
         ></textarea>
         <footer className="bottom-front">
           <button className="flip" onClick={handleFlipClick}>
-            Flip =>
+            Flip <Right className="right" />
           </button>
         </footer>
       </a.div>

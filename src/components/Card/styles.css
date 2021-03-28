@@ -13,13 +13,14 @@
   height: 100%;
   cursor: pointer;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
   padding-top: 4em;
   backface-visibility: hidden;
   box-shadow: 0px 6px 10px 0 hsla(0, 0%, 0%, 0.4);
   background-color: var(--color-bright-day);
-  flex-direction: column;
+
   padding: 1.8em;
   font-size: 0.9em;
 }
@@ -78,8 +79,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-ruby);
+  color: var(--color-darkest-night);
   border: none;
+}
+
+.right {
+  margin-left: 0.4em;
 }
 
 .footer-back {

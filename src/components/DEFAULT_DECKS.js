@@ -3,7 +3,7 @@ import nanoid from "nanoid";
 const DEFAULT_DECKS = [
   {
     id: nanoid(),
-    name: "JS · MDN definitions",
+    name: "JS Standard Built-in Objects · MDN",
     cards: [
       {
         id: nanoid(),
@@ -11,6 +11,7 @@ const DEFAULT_DECKS = [
           "Global property that represents the primitive value Not-A-Number.",
         answer: "NaN",
         nailed: false,
+        number: 1,
       },
       {
         id: nanoid(),
@@ -18,12 +19,14 @@ const DEFAULT_DECKS = [
           "Global property that represents the primitive value undefined.",
         answer: "undefined",
         nailed: false,
+        number: 2,
       },
       {
         id: nanoid(),
         question: "Object that are thrown when runtime errors occur.",
         answer: "Error",
         nailed: false,
+        number: 3,
       },
       {
         id: nanoid(),
@@ -31,6 +34,7 @@ const DEFAULT_DECKS = [
           "Object that holds key-value pairs and remembers the original insertion order of the keys.",
         answer: "Map",
         nailed: false,
+        number: 4,
       },
       {
         id: nanoid(),
@@ -38,6 +42,7 @@ const DEFAULT_DECKS = [
           "Object that lets you store unique values of any type, whether primitive values or object references.",
         answer: "Set",
         nailed: false,
+        number: 5,
       },
       {
         id: nanoid(),
@@ -45,6 +50,7 @@ const DEFAULT_DECKS = [
           "Object that contains methods for parsing JavaScript Object Notation (JSON) and converting values to JSON.",
         answer: "JSON",
         nailed: false,
+        number: 6,
       },
       {
         id: nanoid(),
@@ -52,13 +58,15 @@ const DEFAULT_DECKS = [
           "Object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.",
         answer: "Promise",
         nailed: false,
+        number: 7,
       },
       {
         id: nanoid(),
         question:
-          "Method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises",
+          "Method that takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises",
         answer: "Promise.all()",
         nailed: false,
+        number: 8,
       },
       {
         id: nanoid(),
@@ -66,6 +74,7 @@ const DEFAULT_DECKS = [
           "Array-like object accessible inside functions that contains the values of the arguments passed to that function.",
         answer: "arguments",
         nailed: false,
+        number: 9,
       },
       {
         id: nanoid(),
@@ -73,6 +82,7 @@ const DEFAULT_DECKS = [
           "Syntax allows us to represent an indefinite number of arguments as an array.",
         answer: "The rest parameter",
         nailed: false,
+        number: 10,
       },
       {
         id: nanoid(),
@@ -80,6 +90,7 @@ const DEFAULT_DECKS = [
           "Allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls)",
         answer: "Spread syntax (...)",
         nailed: false,
+        number: 11,
       },
     ],
   },
