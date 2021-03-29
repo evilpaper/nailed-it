@@ -3,14 +3,7 @@ import { useSpring, animated as a } from "react-spring";
 import { ReactComponent as Right } from "../../images/right.svg";
 import "./styles.css";
 
-export default function Card({
-  question,
-  answer,
-  id,
-  number,
-  nailed,
-  handleEditCard,
-}) {
+export default function Card({ question, answer, id, number, handleEditCard }) {
   const [flipped, flip] = useState(true);
 
   const { transform, opacity } = useSpring({
@@ -53,7 +46,7 @@ export default function Card({
             <button
               className="answer"
               onClick={(e) => {
-                handleChange({ nailed: true });
+                handleChange({ nailed: true, flipped: false });
                 handleFlipClick();
               }}
             >
@@ -62,7 +55,7 @@ export default function Card({
             <button
               className="answer"
               onClick={(e) => {
-                handleChange({ nailed: false });
+                handleChange({ nailed: false, flipped: false });
                 handleFlipClick();
               }}
             >
@@ -92,7 +85,13 @@ export default function Card({
           maxLength="75"
         ></textarea>
         <footer className="bottom-front">
-          <button className="flip" onClick={handleFlipClick}>
+          <button
+            className="flip"
+            onClick={() => {
+              handleChange({ flipped: true });
+              handleFlipClick();
+            }}
+          >
             Flip <Right className="right" />
           </button>
         </footer>

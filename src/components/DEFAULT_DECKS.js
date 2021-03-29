@@ -11,6 +11,7 @@ const DEFAULT_DECKS = [
           "Global property that represents the primitive value Not-A-Number.",
         answer: "NaN",
         nailed: false,
+        flipped: false,
         number: 1,
       },
       {
@@ -19,6 +20,7 @@ const DEFAULT_DECKS = [
           "Global property that represents the primitive value undefined.",
         answer: "undefined",
         nailed: false,
+        flipped: false,
         number: 2,
       },
       {
@@ -26,6 +28,7 @@ const DEFAULT_DECKS = [
         question: "Object that are thrown when runtime errors occur.",
         answer: "Error",
         nailed: false,
+        flipped: false,
         number: 3,
       },
       {
@@ -34,6 +37,7 @@ const DEFAULT_DECKS = [
           "Object that holds key-value pairs and remembers the original insertion order of the keys.",
         answer: "Map",
         nailed: false,
+        flipped: false,
         number: 4,
       },
       {
@@ -42,6 +46,7 @@ const DEFAULT_DECKS = [
           "Object that lets you store unique values of any type, whether primitive values or object references.",
         answer: "Set",
         nailed: false,
+        flipped: false,
         number: 5,
       },
       {
@@ -50,6 +55,7 @@ const DEFAULT_DECKS = [
           "Object that contains methods for parsing JavaScript Object Notation (JSON) and converting values to JSON.",
         answer: "JSON",
         nailed: false,
+        flipped: false,
         number: 6,
       },
       {
@@ -58,6 +64,7 @@ const DEFAULT_DECKS = [
           "Object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.",
         answer: "Promise",
         nailed: false,
+        flipped: false,
         number: 7,
       },
       {
@@ -66,6 +73,7 @@ const DEFAULT_DECKS = [
           "Method that takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises",
         answer: "Promise.all()",
         nailed: false,
+        flipped: false,
         number: 8,
       },
       {
@@ -74,6 +82,7 @@ const DEFAULT_DECKS = [
           "Array-like object accessible inside functions that contains the values of the arguments passed to that function.",
         answer: "arguments",
         nailed: false,
+        flipped: false,
         number: 9,
       },
       {
@@ -82,6 +91,7 @@ const DEFAULT_DECKS = [
           "Syntax allows us to represent an indefinite number of arguments as an array.",
         answer: "The rest parameter",
         nailed: false,
+        flipped: false,
         number: 10,
       },
       {
@@ -90,6 +100,7 @@ const DEFAULT_DECKS = [
           "Allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls)",
         answer: "Spread syntax (...)",
         nailed: false,
+        flipped: false,
         number: 11,
       },
     ],
