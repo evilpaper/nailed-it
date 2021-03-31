@@ -1,19 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { ReactComponent as Right } from "../../images/right.svg";
 import "./styles.css";
 
-export default function Card({ question, answer, id, number, handleEditCard }) {
-  const [flipped, flip] = useState(true);
+export default function Card({
+  question,
+  answer,
+  id,
+  flipped,
+  number,
+  handleEditCard,
+}) {
+  const [isFlipped, setIsFlipped] = useState(!flipped);
 
   const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotateY(${flipped ? -180 : 0}deg)`,
+    opacity: isFlipped ? 1 : 0,
+    transform: `perspective(600px) rotateY(${isFlipped ? -180 : 0}deg)`,
     config: { mass: 5, tension: 600, friction: 60 },
   });
 
   const handleFlipClick = () => {
-    flip((flipped) => !flipped);
+    setIsFlipped((isFlipped) => !isFlipped);
   };
 
   const handleChange = (changes) => {
@@ -46,7 +53,7 @@ export default function Card({ question, answer, id, number, handleEditCard }) {
             <button
               className="answer"
               onClick={(e) => {
-                handleChange({ nailed: true, flipped: false });
+                handleChange({ nailed: true, isFlipped: false });
                 handleFlipClick();
               }}
             >
@@ -55,7 +62,7 @@ export default function Card({ question, answer, id, number, handleEditCard }) {
             <button
               className="answer"
               onClick={(e) => {
-                handleChange({ nailed: false, flipped: false });
+                handleChange({ nailed: false, isFlipped: false });
                 handleFlipClick();
               }}
             >
@@ -88,7 +95,7 @@ export default function Card({ question, answer, id, number, handleEditCard }) {
           <button
             className="flip"
             onClick={() => {
-              handleChange({ flipped: true });
+              handleChange({ isFlipped: true });
               handleFlipClick();
             }}
           >

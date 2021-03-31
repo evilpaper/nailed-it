@@ -10,7 +10,7 @@
   margin-left: 2rem;
 }
 
-.deck__name {
+.name {
   border: none;
   text-align: left;
   cursor: pointer;
@@ -18,23 +18,34 @@
   font-size: 1em;
   font-weight: 500;
   color: white;
-  margin-bottom: 0.4em;
   word-wrap: normal;
+  height: 2em;
 }
 
-.deck__name:focus {
+.name:focus {
   outline: none;
 }
 
 .progress {
-  margin-bottom: 0.4em;
   color: #faecef;
-  font-size: 0.9em;
   font-weight: 400;
+  height: 2em;
+  display: flex;
+  align-items: center;
 }
 
 .size {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.percent {
+  margin-left: 0.4em;
+}
+
+.controls {
+  display: flex;
+  margin-bottom: 1em;
   font-weight: 400;
 }
 
@@ -56,14 +67,8 @@
   scroll-snap-align: start;
 }
 
-.controls {
-  display: flex;
-  margin-bottom: 1em;
-}
-
 .shuffle {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.6);
   padding: 0;
   border: none;
   vertical-align: middle;
@@ -80,8 +85,7 @@
 }
 
 .reset {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.6);
   padding: 0;
   border: none;
   vertical-align: middle;

@@ -60,7 +60,7 @@ export default function Deck({
     cards.forEach((card) => {
       if (card.nailed === true) {
         console.log(card);
-        handleCardContentChange({ nailed: false }, card.id, id);
+        handleCardContentChange({ nailed: false, flipped: false }, card.id, id);
       }
     });
   };
@@ -71,15 +71,14 @@ export default function Deck({
         <input
           type="text"
           name="deck-name"
-          className="deck__name"
+          className="name"
           defaultValue={name}
           onChange={(e) => handleEditDeckName(e.target.value)}
           maxLength="30"
         />
         <div className="progress">
-          <span className="size">{`${cards.length} cards · 5 mins · `}</span>
-          {` `}
-          <span>{`${percentageNailed()}% completed`}</span>
+          <p className="size">{`${cards.length} cards · 5 mins · `}</p>
+          <p className="percent">{` ${percentageNailed()}% completed`}</p>
         </div>
         <div className="controls">
           <button className="shuffle" onClick={onClickShuffleDeck}>

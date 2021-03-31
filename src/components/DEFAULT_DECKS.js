@@ -3,7 +3,7 @@ import nanoid from "nanoid";
 const DEFAULT_DECKS = [
   {
     id: nanoid(),
-    name: "JS Standard Built-in Objects · MDN",
+    name: "JavaScript Standard Built-in Objects · MDN",
     cards: [
       {
         id: nanoid(),
@@ -26,7 +26,7 @@ const DEFAULT_DECKS = [
       {
         id: nanoid(),
         question: "Object that are thrown when runtime errors occur.",
-        answer: "Error",
+        answer: "The Error Object",
         nailed: false,
         flipped: false,
         number: 3,
@@ -35,7 +35,7 @@ const DEFAULT_DECKS = [
         id: nanoid(),
         question:
           "Object that holds key-value pairs and remembers the original insertion order of the keys.",
-        answer: "Map",
+        answer: "The Map Object",
         nailed: false,
         flipped: false,
         number: 4,
@@ -44,7 +44,7 @@ const DEFAULT_DECKS = [
         id: nanoid(),
         question:
           "Object that lets you store unique values of any type, whether primitive values or object references.",
-        answer: "Set",
+        answer: "The Set Object",
         nailed: false,
         flipped: false,
         number: 5,
@@ -53,7 +53,7 @@ const DEFAULT_DECKS = [
         id: nanoid(),
         question:
           "Object that contains methods for parsing JavaScript Object Notation (JSON) and converting values to JSON.",
-        answer: "JSON",
+        answer: "The JSON Object",
         nailed: false,
         flipped: false,
         number: 6,
@@ -62,7 +62,7 @@ const DEFAULT_DECKS = [
         id: nanoid(),
         question:
           "Object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.",
-        answer: "Promise",
+        answer: "The Promise object",
         nailed: false,
         flipped: false,
         number: 7,
@@ -71,7 +71,7 @@ const DEFAULT_DECKS = [
         id: nanoid(),
         question:
           "Method that takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises",
-        answer: "Promise.all()",
+        answer: "Promise.all() method",
         nailed: false,
         flipped: false,
         number: 8,
@@ -98,7 +98,7 @@ const DEFAULT_DECKS = [
         id: nanoid(),
         question:
           "Allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls)",
-        answer: "Spread syntax (...)",
+        answer: "the spread syntax (...)",
         nailed: false,
         flipped: false,
         number: 11,
